@@ -1,0 +1,24 @@
+<template name="item_notes">
+	<div class="row align-center">
+	<div class="col-xs-12">
+	&nbsp;
+	</div>
+		<div class="col-xs-12 notes">Short overview of art history
+		</div>
+		  <div class="col-sm-8 col-sm-offset-2">
+		      <textarea class="" id="historyBasic" name="history" rows="4" value="{{basic.notes.history}}"></textarea>
+		  </div>
+		<br/>
+		<div class="col-xs-12 notes">Short overview of provenance
+		</div>
+		  <div class="col-sm-8 col-sm-offset-2">
+		      <textarea class="" id="provenanceBasic" name="provenance" rows="4" value="{{basic.notes.provenance}}"></textarea>
+		  </div>
+		<br/>
+		<div class="col-xs-12 notes">Comments (additional info)
+		</div>
+		  <div class="col-sm-8 col-sm-offset-2">
+		      <textarea class="" id="commentsBasic" name="sources" rows="4" placeholder="(e.g. additional info not covered by the points above)" value="{{basic.notes.comments}}"></textarea>
+		  </div>
+	</div>
+</template>
