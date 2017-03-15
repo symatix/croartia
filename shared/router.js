@@ -7,6 +7,11 @@ Router.route("/", function(){
   this.render('mainGallery', {to:"main"});
 });
 
+Router.route("/paintings", function(){
+  this.render('navbar', {to:"header"});
+  this.render('painting_list', {to:"main"});
+});
+
 Router.route("/login", function(){
   this.render('navbar', {to:"header"});
   this.render('login', {to:"main"});

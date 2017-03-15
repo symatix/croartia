@@ -136,5 +136,40 @@ Template.form_files_basic.events({
           }
         });
      });
+   },
+  'change #data_basic_files': function(event, template) {
+    event.preventDefault();
+      console.log("fajlovi");
+      FS.Utility.eachFile(event, function(file) {
+        var sig = $("#data_basic_files").val();
+        var noValue = "";
+        if(sig != noValue){
+          console.log("nema dzabe ni u stare babe")
+          Data.remove(Session.get("basicFilesId"));
+        }
+        Data.insert(file, function (err, fileObj) {
+          if (err){
+             console.log("hendlam eror");
+          } else {
+             // grabbing url and placing it for gallery img_front value
+            var basicFile = "/cfs/files/data/" + fileObj._id +"/data?store=data";
+            var basicFileId = fileObj._id;
+
+            var fullPath = document.getElementById("data_basic_files").value; //jquery a "no go" lol
+            if (fullPath) {
+                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+                var filename = fullPath.substring(startIndex);
+                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                    filename = filename.substring(1);
+                }
+              }
+              console.log(filename);
+            $("#basic_files").val(basicFile);
+            $("#basic_files_id").val(basicFileId);
+            document.getElementById("upload_basic_files").innerHTML = filename; //no jquery
+            Session.set("basicFilesId", basicFileId);
+          }
+        });
+     });
    }
 })

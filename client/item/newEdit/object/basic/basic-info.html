@@ -71,11 +71,35 @@
     <div class="col-xs-12 col-md-6">
       <input type="text" class="individual-value individual-form" id="inventoryNumber" placeholder="" value="{{basic.inventoryNumber}}">
     </div>
+    <div class="col-xs-12 col-md-6 individual-property authority">
+      RESPONSIBLE CONSERVATION AUTHORITY
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="authority" placeholder="" value="{{basic.authority}}">
+    </div>
+    <div class="col-xs-12 col-md-6 individual-property legalStatus">
+      LEGAL STATUS OF CONSERVATION PROTECTION
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <input type="text" class="individual-value individual-form" id="legalStatus" placeholder="(e.g. protected cultural heritage)" value="{{basic.legalStatus}}">
+    </div>
     <div class="col-xs-12 col-md-6 individual-property location">
       INVESTIGATED BY THE FOLLOWING METHODS/TECHNIQUES
     </div>
     <div class="col-xs-12 col-md-6">
       <input type="text" class="individual-value individual-form" id="methodsTechniques" placeholder="" value="{{basic.investigated}}">
+    </div>
+    <div class="col-xs-12 individual-property projectName align-center">
+      RELATED CONSERVATION/RESTORATION/INVESTIGATION PROJECT NAME
+    </div>
+    <div class="col-xs-12">
+      <input type="text" class="individual-lg individual-form align-center" id="summaryProjects" placeholder="(e.g. Diploma thesis: Conservation works on painting The Satyr and the Peasant by Miroslav Kraljević)" value="{{basic.projectName}}">
+    </div>
+    <div class="col-xs-12 individual-property summaryProjects align-center">
+      SUMMARY OF PROJECT/CONSERVATION/RESTORATION AND INVESTIGATION WORKS
+    </div>
+    <div class="col-xs-12">
+      <input type="text" class="individual-lg individual-form align-center" id="summaryProjects" placeholder="(e.g. summary of related diploma thesis or treatment report)" value="{{basic.summaryProjects}}">
     </div>
   </div>
     {{> item_notes}}

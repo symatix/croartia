@@ -1,94 +1,113 @@
 <template name="mainGallery">
   <div class="container-fluid">
-    <h1 class="prospero">PROSPERO</h1><h2 class="subhead"> ART & RESEARCH DATABASE</h2>
+    <h1 class="prospero">CROARTIA</h1><h2 class="subhead"> ART & RESEARCH DATABASE</h2>
     {{#if currentUser}}
       <h3 class="welcome-msg">welcome <span class="post-heading underline">{{username}}</span></h3>
     {{/if}}
     <div class="container margin-top">
-      {{#EasySearch.Each index=galleryIndex }}    
-      <div class="row item-list" id="{{__originalId}}">
-            <ul class="list-font">
-              <li>
-<!-- title of item list -->
-                  <div class="col-md-12 align-center item-list-heading item-heading">
-                    {{#if noDataAuthor}}
-                      {{> missing_value}}
-                    {{/if}}
-                      <span class="item-property">&emsp;{{basic.author}}</span><br/>
-                      <i>
-                    {{#if noDataTitle}}
-                      {{> missing_value}}
-                    {{/if}}
-                    {{basic.title}}
-                      </i>
-                  </div>
-                  <div class="col-md-3">
-                  {{#if noImg}}
-                    {{> no_img}}
-                  {{else}}
-                    <img class="img-list" id="img-front-{{__originalId}}" src="{{data.imgs.img_front}}" data-toggle="modal" data-target="#thumb-modal">
-                  {{/if}}
-                  </div>
-<!-- first info collumn -->
-                  <div class="col-md-3 list-font">
-                    <span class="item-property">&emsp;Date</span><br/>
-                    <i>
-                    {{#if noDataDate}}
-                      {{> missing_value}}
-                    {{/if}}
-                    {{basic.date}}</i>
-                    <br/>
-                    <br/>
-                    <span class="item-property">&emsp;Period / Style</span><br/>
-                    <i>
-                    {{#if noDataPeriod}}
-                      {{> missing_value}}
-                    {{/if}}
-					{{basic.period_style}}
-                    </i>
-                  </div>
-<!-- second info collumn -->
-                  <div class="col-md-3 list-font">
-                    <span class="item-property">&emsp;Tehnique</span><br/>
-                    <i>
-                    {{#if noDataTechnique}}
-                      {{> missing_value}}
-                    {{/if}}
-                      {{basic.painting_technique}}
-                    </i>
-                    <br/>
-                    <br/>
-                    <span class="item-property">&emsp;Paint layer</span><br/>
-                    <i>
-                    {{#if noDataPaint}}
-                      {{> missing_value}}
-                    {{/if}}
-					{{basic.paint_layer}}
-                    </i>
-                  </div>
-<!-- third info collumn -->
-                  <div class="col-md-3 list-font">
-                    <span class="item-property">&emsp;Collection / Owner</span><br/>
-                    <i>
-                    {{#if noDataOwner}}
-                      {{> missing_value}}
-                    {{/if}}
-                    {{basic.collection_owner}}</i>
-                    <br/>
-                    <br/>
-                      <a href="/gallery/details/{{__originalId}}">
-                       <button class="btn btn-top-fix btn-default  js-public-details">DETAILS</button>
-                      </a>
-                  </div>
-
-              </li>
-            </ul>
-            </div>
+      <div class="row">
+      {{#EasySearch.Each index=galleryIndex }}  
       {{/EasySearch.Each}}
+      <!-- pictures -->
+      <a href="/paintings">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="row align-center form-box objectBranch">
+          <h3>Pictures</h3>
+          {{#each pictures}}
+          <div class="col-xs-6">
+            <img class="img-edit" src="{{data.basic.front}}"/>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      </a> <!-- /end pictures -->
+      <!-- sculptures -->
+      <a href="#">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="row align-center form-box objectBranch">
+          <h3>Sculptures</h3>
+          {{#each sculptures}}
+          <div class="col-xs-6">
+            <img class="img-edit" src="{{data.basic.front}}"/>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      </a> <!-- /end sculptures -->
+      <!-- Architectural heritage -->
+      <a href="#">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="row align-center form-box objectBranch">
+          <h3>Architectural heritage</h3>
+          {{#each heritage}}
+          <div class="col-xs-6">
+            <img class="img-edit" src="{{data.basic.front}}"/>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      </a> <!-- /end Architectural heritage -->
+      <!-- Archival object -->
+      <a href="#">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="row align-center form-box objectBranch">
+          <h3>Archival object</h3>
+          {{#each archival}}
+          <div class="col-xs-6">
+            <img class="img-edit" src="{{data.basic.front}}"/>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      </a> <!-- /end Archival object -->
+      <!-- Archaeological object -->
+      <a href="#">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="row align-center form-box objectBranch">
+          <h3>Archaeological object</h3>
+          {{#each archaeological}}
+          <div class="col-xs-6">
+            <img class="img-edit" src="{{data.basic.front}}"/>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      </a> <!-- /end Archaeological object -->
+      <!-- Material -->
+      <a href="#">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="row align-center form-box objectBranch">
+          <h3>Material</h3>
+          {{#each material}}
+          <div class="col-xs-6">
+            <img class="img-edit" src="{{data.basic.front}}"/>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      </a> <!-- /end Material -->
+      <!-- other -->
+      <a href="#">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="row align-center form-box objectBranch">
+          <h3>Other</h3>
+          {{#each other}}
+          <div class="col-xs-6">
+            <img class="img-edit" src="{{data.basic.front}}"/>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      </a> <!-- /end other -->
+
+
       {{> EasySearch.LoadMore attributes=loadBtn index=galleryIndex content="Load more content"}}
-                      {{#EasySearch.IfNoResults index=galleryIndex}}
-                        <div class="no-search">No results found!</div>
-                      {{/EasySearch.IfNoResults}}
+
+      {{#EasySearch.IfNoResults index=galleryIndex}}
+        <div class="no-search">No results found!</div>
+      {{/EasySearch.IfNoResults}}
+
+      </div>
     </div>
   </div>
 

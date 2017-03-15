@@ -2,7 +2,7 @@
   <!-- container -->
     <div class="container">
     <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}} } {{/if}}
-      <a class="a-heading" href="/">prosperoDB </a>/
+      <a class="a-heading" href="/">croARTia </a>/
       {{#if currentUser}}
         {{#if admin}}
           <a class="a-heading" href="/admin/prosperoDB"> manageDB </a>/
@@ -59,7 +59,7 @@
               </h4>
             </div>
             <div class="modal-body align-center">
-              <img class="img-modal" src="{{data.imgs.img_front}}">
+              <img class="img-modal" src="{{data.basic.front}}">
             </div>
           </div>
         </div>
@@ -72,12 +72,48 @@
 
             <div class="modal-header">
               <h4 class="modal-title">
-				{{basic.title}} • back image
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-			 </h4>
+        {{basic.title}} • back image
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+       </h4>
             </div>
             <div class="modal-body align-center">
-              <img class="img-modal" src="{{data.imgs.img_back}}">
+              <img class="img-modal" src="{{data.basic.back}}">
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <!-- modal - side -->
+      <div class="modal fade" id="thumb-modal-side" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content modal-div">
+
+            <div class="modal-header">
+              <h4 class="modal-title">
+        {{basic.title}} • back image
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+       </h4>
+            </div>
+            <div class="modal-body align-center">
+              <img class="img-modal" src="{{data.basic.side}}">
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <!-- modal - side -->
+      <div class="modal fade" id="thumb-modal-signature" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content modal-div">
+
+            <div class="modal-header">
+              <h4 class="modal-title">
+        {{basic.title}} • back image
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+       </h4>
+            </div>
+            <div class="modal-body align-center">
+              <img class="img-modal" src="{{data.basic.signature}}">
             </div>
           </div>
         </div>

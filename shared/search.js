@@ -1,3 +1,4 @@
+
 GalleryIndex = new EasySearch.Index({
   collection: Prospero,
   name:'mainGallery',
@@ -6,7 +7,51 @@ GalleryIndex = new EasySearch.Index({
     // user search - has to filter hidden items
         selector: function(searchObject, options, aggregation) {
             var selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
-            selector.visible = {$ne:"hidden"}
+            selector.type = {$ne:"hidden"}
+            //console.log(selector);
+            return selector;
+        },
+        sort: function (searchObject, options) {
+          const sortBy = options.search.props.sortBy
+
+          // return a mongo sort specifier
+          if ('last_entry' === sortBy) {
+            return {
+              "createdAt": -1
+            }
+          } else if ('first_entry' === sortBy) {
+            return {
+              "createdAt": 1
+            }
+          } else if ('title_a' === sortBy) {
+            return {
+              "basic.title": 1
+            }
+          } else if ('title_z' === sortBy) {
+            return {
+              "basic.title": -1
+            }
+          } else if ('author_a' === sortBy) {
+            return {
+              "basic.author": 1
+            }
+          } else if ('author_z' === sortBy) {
+            return {
+              "basic.author": -1
+            }
+          }
+        },
+  }),
+})
+PaintingIndex = new EasySearch.Index({
+  collection: Prospero,
+  name:'paintingGallery',
+  fields: ["basic.author", "basic.title"],
+  engine: new EasySearch.MongoDB({
+    // user search - has to filter hidden items
+        selector: function(searchObject, options, aggregation) {
+            var selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
+            selector.type = "Pictures"
             //console.log(selector);
             return selector;
         },

@@ -1193,6 +1193,8 @@ clearIndividualValues: function(){
         side_id:document.getElementById("img_side_id").value,
         signature:document.getElementById("img_signature").value,
         signature_id:document.getElementById("img_signature_id").value,
+        basic_files:document.getElementById("basic_files").value,
+        basic_files_id:document.getElementById("basic_files_id").value,
       },
       original:{
         photoOne:document.getElementById("photoOne1").value,
@@ -1242,10 +1244,13 @@ clearIndividualValues: function(){
 		  currentOwner:document.getElementById("currentOwner").value,
 		  originalLocation:document.getElementById("originalLocation").value,
 		  currentLocation:document.getElementById("currentLocation").value,
-		  inventoryNumber:document.getElementById("inventoryNumber").value,
-		  investigated:document.getElementById("methodsTechniques").value,
+      inventoryNumber:document.getElementById("inventoryNumber").value,
+      authority:document.getElementById("authority").value,
+      legalStatus:document.getElementById("legalStatus").value,
+      investigated:document.getElementById("methodsTechniques").value,
+      projectName:document.getElementById("projectName").value,
+      summaryProjects:document.getElementById("summaryProjects").value,
       notes:{
-        history:document.getElementById("historyBasic").value,
         provenance:document.getElementById("provenanceBasic").value,
         comments:document.getElementById("commentsBasic").value
       },

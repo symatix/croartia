@@ -1,8 +1,9 @@
 // web ("/") / local ("index/index")
 Template.mainGallery.helpers({
   galleryIndex: () => GalleryIndex,
+
   gallery:function(){
-    return Prospero.find({"visible":"public"}, {sort:Session.get("sortIndex"), limit:Session.get("siteLimit")});
+    return Prospero.find({}, {sort:Session.get("sortIndex"), limit:Session.get("siteLimit")});
   },
   loadBtn:function(){
     return {class:"btn btn-default btn-submit float-right"}
@@ -10,44 +11,25 @@ Template.mainGallery.helpers({
   username:function(){
     return Meteor.user().profile.full_name;
   },
-  noDataTechnique:function(){
-    if(Prospero.findOne({_id:this.__originalId}).basic.painting_technique == ""){
-      return true;
-    }
+  pictures:function(){
+    return Prospero.find({"type":"Pictures"}, {limit:4});
   },
-  noDataDate:function(){
-    if(Prospero.findOne({_id:this.__originalId}).basic.date == ""){
-      return true;
-    }
+  sculptures:function(){
+    return Prospero.find({"type":"Sculpture"}, {limit:4});
   },
-  noDataPaint:function(){
-    if(Prospero.findOne({_id:this.__originalId}).basic.paint_layer== ""){
-      return true;
-    }
+  heritage:function(){
+    return Prospero.find({"type":"Architectural heritage"}, {limit:4});
   },
-  noDataAuthor:function(){
-    if(Prospero.findOne({_id:this.__originalId}).basic.author == ""){
-      return true;
-    }
+  archival:function(){
+    return Prospero.find({"type":"Archival object"}, {limit:4});
   },
-  noDataTitle:function(){
-    if(Prospero.findOne({_id:this.__originalId}).basic.title == ""){
-      return true;
-    }
+  archaeological:function(){
+    return Prospero.find({"type":"Archaeological object"}, {limit:4});
   },
-  noDataOwner:function(){
-    if(Prospero.findOne({_id:this.__originalId}).basic.collection_owner == ""){
-      return true;
-    }
+  material:function(){
+    return Prospero.find({"type":"Pigment/dye/binder/varnish/reference materials"}, {limit:4});
   },
-  noDataPeriod:function(){
-    if(Prospero.findOne({_id:this.__originalId}).basic.period_style == ""){
-      return true;
-    }
-  },
-  noImg:function(){
-    if(Prospero.findOne({_id:this.__originalId}).data.imgs.img_front == ""){
-      return true;
-    }
+  other:function(){
+    return Prospero.find({"type":"Other"}, {limit:4});
   }
 })
