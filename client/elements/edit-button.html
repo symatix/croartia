@@ -7,12 +7,12 @@ maybe change this to global if user/admin
 	    
     {{#if admin}}
 	    <a href="/admin/edit/{{_id}}">
-	       <button class="btn btn-default btn-submit">EDIT</button>
+	       <button class="btn btn-default btn-submit js-setSessionEdit">EDIT</button>
 	    </a>  
 	{{else}}
 	{{#if owner}}
 	    <a href="/gallery/edit/{{_id}}">
-	      <button class="btn btn-default btn-submit">EDIT</button>
+	      <button class="btn btn-default btn-submit js-setSessionEdit">EDIT</button>
 	    </a>
    {{/if}}
   {{/if}}

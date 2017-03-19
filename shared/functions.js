@@ -341,38 +341,38 @@ clearIndividualValues: function(){
       }
     }
 ////////////////////////////////////////////////////////////////////////////////////////
-    if(!$('#fr_ir').is(':checked')){
+    if(!$('#ft_ir').is(':checked')){
 
-      var fr_irDetails = false;
+      var ft_irDetails = false;
       
     } else {
 
-      var fr_irDetails = {
-          experimentalParameters:document.getElementById("object_fr_irExperimental").value,
-          elements:document.getElementById("object_fr_irElements").value,
-          formulae:document.getElementById("object_fr_irFormulae").value,
-          pigmentsDyes:document.getElementById("object_fr_irPigmentsDyes").value,
-          priming:document.getElementById("object_fr_irPriming").value,
-          bindingMedia:document.getElementById("object_fr_irBindingMedia").value,
-          varnish:document.getElementById("object_fr_irVarnish").value,
-          stretcherSupportStrainer:document.getElementById("object_fr_irStretcherSupportStrainer").value,
+      var ft_irDetails = {
+          experimentalParameters:document.getElementById("object_ft_irExperimental").value,
+          elements:document.getElementById("object_ft_irElements").value,
+          formulae:document.getElementById("object_ft_irFormulae").value,
+          pigmentsDyes:document.getElementById("object_ft_irPigmentsDyes").value,
+          priming:document.getElementById("object_ft_irPriming").value,
+          bindingMedia:document.getElementById("object_ft_irBindingMedia").value,
+          varnish:document.getElementById("object_ft_irVarnish").value,
+          stretcherSupportStrainer:document.getElementById("object_ft_irStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_fr_irBrief").value,
-            comments:document.getElementById("object_fr_irComments").value,
-            sources:document.getElementById("object_fr_irSources").value,
-            caption:document.getElementById("object_fr_irCaption").value,
+            brief:document.getElementById("object_ft_irBrief").value,
+            comments:document.getElementById("object_ft_irComments").value,
+            sources:document.getElementById("object_ft_irSources").value,
+            caption:document.getElementById("object_ft_irCaption").value,
           },
           files:{
-            fr_irFiles1:document.getElementById("fr_irFiles1").value,
-            fr_irFiles1_id:document.getElementById("fr_irFiles1_id").value,
-            fr_irFiles2:document.getElementById("fr_irFiles2").value,
-            fr_irFiles2_id:document.getElementById("fr_irFiles2_id").value,
-            fr_irFiles3:document.getElementById("fr_irFiles3").value,
-            fr_irFiles3_id:document.getElementById("fr_irFiles3_id").value,
-            fr_irFiles4:document.getElementById("fr_irFiles4").value,
-            fr_irFiles4_id:document.getElementById("fr_irFiles4_id").value,
-            fr_irFiles5:document.getElementById("fr_irFiles5").value,
-            fr_irFiles5_id:document.getElementById("fr_irFiles5_id").value,
+            ft_irFiles1:document.getElementById("ft_irFiles1").value,
+            ft_irFiles1_id:document.getElementById("ft_irFiles1_id").value,
+            ft_irFiles2:document.getElementById("ft_irFiles2").value,
+            ft_irFiles2_id:document.getElementById("ft_irFiles2_id").value,
+            ft_irFiles3:document.getElementById("ft_irFiles3").value,
+            ft_irFiles3_id:document.getElementById("ft_irFiles3_id").value,
+            ft_irFiles4:document.getElementById("ft_irFiles4").value,
+            ft_irFiles4_id:document.getElementById("ft_irFiles4_id").value,
+            ft_irFiles5:document.getElementById("ft_irFiles5").value,
+            ft_irFiles5_id:document.getElementById("ft_irFiles5_id").value,
           }
       }
     }
@@ -773,38 +773,38 @@ clearIndividualValues: function(){
       }
     }
 ////////////////////////////////////////////////////////////////////////////////////////
-    if(!$('#rtg').is(':checked')){
+    if(!$('#xxr').is(':checked')){
 
-      var rtgDetails = false;
+      var xxrDetails = false;
       
     } else {
 
-      var rtgDetails = {
-          experimentalParameters:document.getElementById("object_rtgExperimental").value,
-          elements:document.getElementById("object_rtgElements").value,
-          formulae:document.getElementById("object_rtgFormulae").value,
-          pigmentsDyes:document.getElementById("object_rtgPigmentsDyes").value,
-          priming:document.getElementById("object_rtgPriming").value,
-          bindingMedia:document.getElementById("object_rtgBindingMedia").value,
-          varnish:document.getElementById("object_rtgVarnish").value,
-          stretcherSupportStrainer:document.getElementById("object_rtgStretcherSupportStrainer").value,
+      var xxrDetails = {
+          experimentalParameters:document.getElementById("object_xxrExperimental").value,
+          elements:document.getElementById("object_xxrElements").value,
+          formulae:document.getElementById("object_xxrFormulae").value,
+          pigmentsDyes:document.getElementById("object_xxrPigmentsDyes").value,
+          priming:document.getElementById("object_xxrPriming").value,
+          bindingMedia:document.getElementById("object_xxrBindingMedia").value,
+          varnish:document.getElementById("object_xxrVarnish").value,
+          stretcherSupportStrainer:document.getElementById("object_xxrStretcherSupportStrainer").value,
           notes:{
-            brief:document.getElementById("object_rtgBrief").value,
-            comments:document.getElementById("object_rtgComments").value,
-            sources:document.getElementById("object_rtgSources").value,
-            caption:document.getElementById("object_rtgCaption").value,
+            brief:document.getElementById("object_xxrBrief").value,
+            comments:document.getElementById("object_xxrComments").value,
+            sources:document.getElementById("object_xxrSources").value,
+            caption:document.getElementById("object_xxrCaption").value,
           },
           files:{
-            rtgFiles1:document.getElementById("rtgFiles1").value,
-            rtgFiles1_id:document.getElementById("rtgFiles1_id").value,
-            rtgFiles2:document.getElementById("rtgFiles2").value,
-            rtgFiles2_id:document.getElementById("rtgFiles2_id").value,
-            rtgFiles3:document.getElementById("rtgFiles3").value,
-            rtgFiles3_id:document.getElementById("rtgFiles3_id").value,
-            rtgFiles4:document.getElementById("rtgFiles4").value,
-            rtgFiles4_id:document.getElementById("rtgFiles4_id").value,
-            rtgFiles5:document.getElementById("rtgFiles5").value,
-            rtgFiles5_id:document.getElementById("rtgFiles5_id").value,
+            xxrFiles1:document.getElementById("xxrFiles1").value,
+            xxrFiles1_id:document.getElementById("xxrFiles1_id").value,
+            xxrFiles2:document.getElementById("xxrFiles2").value,
+            xxrFiles2_id:document.getElementById("xxrFiles2_id").value,
+            xxrFiles3:document.getElementById("xxrFiles3").value,
+            xxrFiles3_id:document.getElementById("xxrFiles3_id").value,
+            xxrFiles4:document.getElementById("xxrFiles4").value,
+            xxrFiles4_id:document.getElementById("xxrFiles4_id").value,
+            xxrFiles5:document.getElementById("xxrFiles5").value,
+            xxrFiles5_id:document.getElementById("xxrFiles5_id").value,
           }
       }
     }
@@ -1133,6 +1133,150 @@ clearIndividualValues: function(){
       }
     }
 ////////////////////////////////////////////////////////////////////////////////////////
+    if(!$('#colorimetry').is(':checked')){
+
+      var colorimetryDetails = false;
+      
+    } else {
+
+      var colorimetryDetails = {
+          experimentalParameters:document.getElementById("object_colorimetryExperimental").value,
+          elements:document.getElementById("object_colorimetryElements").value,
+          formulae:document.getElementById("object_colorimetryFormulae").value,
+          pigmentsDyes:document.getElementById("object_colorimetryPigmentsDyes").value,
+          priming:document.getElementById("object_colorimetryPriming").value,
+          bindingMedia:document.getElementById("object_colorimetryBindingMedia").value,
+          varnish:document.getElementById("object_colorimetryVarnish").value,
+          stretcherSupportStrainer:document.getElementById("object_colorimetryStretcherSupportStrainer").value,
+          notes:{
+            brief:document.getElementById("object_colorimetryBrief").value,
+            comments:document.getElementById("object_colorimetryComments").value,
+            sources:document.getElementById("object_colorimetrySources").value,
+            caption:document.getElementById("object_colorimetryCaption").value,
+          },
+          files:{
+            colorimetryFiles1:document.getElementById("colorimetryFiles1").value,
+            colorimetryFiles1_id:document.getElementById("colorimetryFiles1_id").value,
+            colorimetryFiles2:document.getElementById("colorimetryFiles2").value,
+            colorimetryFiles2_id:document.getElementById("colorimetryFiles2_id").value,
+            colorimetryFiles3:document.getElementById("colorimetryFiles3").value,
+            colorimetryFiles3_id:document.getElementById("colorimetryFiles3_id").value,
+            colorimetryFiles4:document.getElementById("colorimetryFiles4").value,
+            colorimetryFiles4_id:document.getElementById("colorimetryFiles4_id").value,
+            colorimetryFiles5:document.getElementById("colorimetryFiles5").value,
+            colorimetryFiles5_id:document.getElementById("colorimetryFiles5_id").value,
+          }
+      }
+    }
+////////////////////////////////////////////////////////////////////////////////////////
+    if(!$('#plm').is(':checked')){
+
+      var plmDetails = false;
+      
+    } else {
+
+      var plmDetails = {
+          experimentalParameters:document.getElementById("object_plmExperimental").value,
+          elements:document.getElementById("object_plmElements").value,
+          formulae:document.getElementById("object_plmFormulae").value,
+          pigmentsDyes:document.getElementById("object_plmPigmentsDyes").value,
+          priming:document.getElementById("object_plmPriming").value,
+          bindingMedia:document.getElementById("object_plmBindingMedia").value,
+          varnish:document.getElementById("object_plmVarnish").value,
+          stretcherSupportStrainer:document.getElementById("object_plmStretcherSupportStrainer").value,
+          notes:{
+            brief:document.getElementById("object_plmBrief").value,
+            comments:document.getElementById("object_plmComments").value,
+            sources:document.getElementById("object_plmSources").value,
+            caption:document.getElementById("object_plmCaption").value,
+          },
+          files:{
+            plmFiles1:document.getElementById("plmFiles1").value,
+            plmFiles1_id:document.getElementById("plmFiles1_id").value,
+            plmFiles2:document.getElementById("plmFiles2").value,
+            plmFiles2_id:document.getElementById("plmFiles2_id").value,
+            plmFiles3:document.getElementById("plmFiles3").value,
+            plmFiles3_id:document.getElementById("plmFiles3_id").value,
+            plmFiles4:document.getElementById("plmFiles4").value,
+            plmFiles4_id:document.getElementById("plmFiles4_id").value,
+            plmFiles5:document.getElementById("plmFiles5").value,
+            plmFiles5_id:document.getElementById("plmFiles5_id").value,
+          }
+      }
+    }
+////////////////////////////////////////////////////////////////////////////////////////
+    if(!$('#synchrotron').is(':checked')){
+
+      var synchrotronDetails = false;
+      
+    } else {
+
+      var synchrotronDetails = {
+          experimentalParameters:document.getElementById("object_synchrotronExperimental").value,
+          elements:document.getElementById("object_synchrotronElements").value,
+          formulae:document.getElementById("object_synchrotronFormulae").value,
+          pigmentsDyes:document.getElementById("object_synchrotronPigmentsDyes").value,
+          priming:document.getElementById("object_synchrotronPriming").value,
+          bindingMedia:document.getElementById("object_synchrotronBindingMedia").value,
+          varnish:document.getElementById("object_synchrotronVarnish").value,
+          stretcherSupportStrainer:document.getElementById("object_synchrotronStretcherSupportStrainer").value,
+          notes:{
+            brief:document.getElementById("object_synchrotronBrief").value,
+            comments:document.getElementById("object_synchrotronComments").value,
+            sources:document.getElementById("object_synchrotronSources").value,
+            caption:document.getElementById("object_synchrotronCaption").value,
+          },
+          files:{
+            synchrotronFiles1:document.getElementById("synchrotronFiles1").value,
+            synchrotronFiles1_id:document.getElementById("synchrotronFiles1_id").value,
+            synchrotronFiles2:document.getElementById("synchrotronFiles2").value,
+            synchrotronFiles2_id:document.getElementById("synchrotronFiles2_id").value,
+            synchrotronFiles3:document.getElementById("synchrotronFiles3").value,
+            synchrotronFiles3_id:document.getElementById("synchrotronFiles3_id").value,
+            synchrotronFiles4:document.getElementById("synchrotronFiles4").value,
+            synchrotronFiles4_id:document.getElementById("synchrotronFiles4_id").value,
+            synchrotronFiles5:document.getElementById("synchrotronFiles5").value,
+            synchrotronFiles5_id:document.getElementById("synchrotronFiles5_id").value,
+          }
+      }
+    }
+////////////////////////////////////////////////////////////////////////////////////////
+    if(!$('#ol').is(':checked')){
+
+      var olDetails = false;
+      
+    } else {
+
+      var olDetails = {
+          experimentalParameters:document.getElementById("object_olExperimental").value,
+          elements:document.getElementById("object_olElements").value,
+          formulae:document.getElementById("object_olFormulae").value,
+          pigmentsDyes:document.getElementById("object_olPigmentsDyes").value,
+          priming:document.getElementById("object_olPriming").value,
+          bindingMedia:document.getElementById("object_olBindingMedia").value,
+          varnish:document.getElementById("object_olVarnish").value,
+          stretcherSupportStrainer:document.getElementById("object_olStretcherSupportStrainer").value,
+          notes:{
+            brief:document.getElementById("object_olBrief").value,
+            comments:document.getElementById("object_olComments").value,
+            sources:document.getElementById("object_olSources").value,
+            caption:document.getElementById("object_olCaption").value,
+          },
+          files:{
+            olFiles1:document.getElementById("olFiles1").value,
+            olFiles1_id:document.getElementById("olFiles1_id").value,
+            olFiles2:document.getElementById("olFiles2").value,
+            olFiles2_id:document.getElementById("olFiles2_id").value,
+            olFiles3:document.getElementById("olFiles3").value,
+            olFiles3_id:document.getElementById("olFiles3_id").value,
+            olFiles4:document.getElementById("olFiles4").value,
+            olFiles4_id:document.getElementById("olFiles4_id").value,
+            olFiles5:document.getElementById("olFiles5").value,
+            olFiles5_id:document.getElementById("olFiles5_id").value,
+          }
+      }
+    }
+////////////////////////////////////////////////////////////////////////////////////////
     if(!$('#xrf').is(':checked')){
 
       var xrfDetails = false;
@@ -1171,7 +1315,6 @@ clearIndividualValues: function(){
 
 
     var itemType = $("input[name='type']:checked").val();
-    alert(itemType);
     var itemDetails = {
     type:itemType,
     info:{
@@ -1198,37 +1341,37 @@ clearIndividualValues: function(){
       },
       original:{
         photoOne:document.getElementById("photoOne1").value,
-        photoOne1_id:document.getElementById("photoOne1_id").value,
-        photoTwo1:document.getElementById("photoTwo1").value,
-        photoTwo1_id:document.getElementById("photoTwo1_id").value,
-        photoThree1:document.getElementById("photoThree1").value,
-        photoThree1_id:document.getElementById("photoThree1_id").value,
-        photoFour1:document.getElementById("photoFour1").value,
-        photoFour1_id:document.getElementById("photoFour1_id").value,
+        photoOne_id:document.getElementById("photoOne1_id").value,
+        photoTwo:document.getElementById("photoTwo1").value,
+        photoTwo_id:document.getElementById("photoTwo1_id").value,
+        photoThree:document.getElementById("photoThree1").value,
+        photoThree_id:document.getElementById("photoThree1_id").value,
+        photoFour:document.getElementById("photoFour1").value,
+        photoFour_id:document.getElementById("photoFour1_id").value,
         files:document.getElementById("files1").value,
         files_id:document.getElementById("files1_id").value,
       },
       interventions:{
-        photoOne2:document.getElementById("photoOne2").value,
-        photoOne2_id:document.getElementById("photoOne2_id").value,
-        photoTwo2:document.getElementById("photoTwo2").value,
-        photoTwo2_id:document.getElementById("photoTwo2_id").value,
-        photoThree2:document.getElementById("photoThree2").value,
-        photoThree2_id:document.getElementById("photoThree2_id").value,
-        photoFour2:document.getElementById("photoFour2").value,
-        photoFour2_id:document.getElementById("photoFour2_id").value,
+        photoOne:document.getElementById("photoOne2").value,
+        photoOne_id:document.getElementById("photoOne2_id").value,
+        photoTwo:document.getElementById("photoTwo2").value,
+        photoTwo_id:document.getElementById("photoTwo2_id").value,
+        photoThree:document.getElementById("photoThree2").value,
+        photoThree_id:document.getElementById("photoThree2_id").value,
+        photoFour:document.getElementById("photoFour2").value,
+        photoFour_id:document.getElementById("photoFour2_id").value,
         files:document.getElementById("files2").value,
         files_id:document.getElementById("files2_id").value,
       },
       restoration:{
-        photoOne3:document.getElementById("photoOne3").value,
-        photoOne3_id:document.getElementById("photoOne3_id").value,
-        photoTwo3:document.getElementById("photoTwo3").value,
-        photoTwo3_id:document.getElementById("photoTwo3_id").value,
-        photoThree3:document.getElementById("photoThree3").value,
-        photoThree3_id:document.getElementById("photoThree3_id").value,
-        photoFour3:document.getElementById("photoFour3").value,
-        photoFour3_id:document.getElementById("photoFour3_id").value,
+        photoOne:document.getElementById("photoOne3").value,
+        photoOne_id:document.getElementById("photoOne3_id").value,
+        photoTwo:document.getElementById("photoTwo3").value,
+        photoTwo_id:document.getElementById("photoTwo3_id").value,
+        photoThree:document.getElementById("photoThree3").value,
+        photoThree_id:document.getElementById("photoThree3_id").value,
+        photoFour:document.getElementById("photoFour3").value,
+        photoFour_id:document.getElementById("photoFour3_id").value,
         files:document.getElementById("files3").value,
         files_id:document.getElementById("files3_id").value,
       },
@@ -1261,6 +1404,7 @@ clearIndividualValues: function(){
         pigmentsDyes:document.getElementById("pigmentsDyes1").value,
         bendingMedium:document.getElementById("bendingMedium1").value,
         additives:document.getElementById("additives1").value,
+        filler:document.getElementById("filler1").value,
         layerVarnish:document.getElementById("layerVarnish1").value,
         underdrawingPentimento:document.getElementById("underdrawingPentimento1").value,
         leafs:document.getElementById("leafs1").value,
@@ -1279,7 +1423,6 @@ clearIndividualValues: function(){
         decorativeApplications:document.getElementById("decorativeApplications1").value,
         potataGiornata:document.getElementById("potataGiornata1").value,
         relief:document.getElementById("relief1").value,
-        samples:document.getElementById("samples1").value,
         plaster:{
           layers:document.getElementById("p_layers1").value,
           composition:document.getElementById("p_composition1").value,
@@ -1289,7 +1432,7 @@ clearIndividualValues: function(){
           weft:document.getElementById("densityWeft1").value,
           warp:document.getElementById("densityWarp1").value,
         },
-        thickness:{
+        thicknessOfThread:{
           weft:document.getElementById("thicknessWeft1").value,
           warp:document.getElementById("thicknessWarp1").value,
         },
@@ -1300,19 +1443,24 @@ clearIndividualValues: function(){
           decorativeLayer:document.getElementById("df_decorativeLayer1").value,
         },
         notes:{
+          samples:document.getElementById("samples1").value,
+          artHistory:document.getElementById("artHistory1").value,
           sources:document.getElementById("sources1").value,
-          comments:document.getElementById("comments1").value
+          comments:document.getElementById("comments1").value,
+          figureCaption:document.getElementById("figureCaption1").value,
         },
       },
       interventions:{
         primingGround:document.getElementById("primingGround2").value,
         pigmentsDyes:document.getElementById("pigmentsDyes2").value,
         bendingMedium:document.getElementById("bendingMedium2").value,
+        filler:document.getElementById("filler2").value,
         additives:document.getElementById("additives2").value,
         layerVarnish:document.getElementById("layerVarnish2").value,
         leafs:document.getElementById("leafs2").value,
         leafsApplication:document.getElementById("leafsApplication2").value,
         periodStyle:document.getElementById("periodStyle2").value,
+        stretcher:document.getElementById("stretcher1").value,
         interventions:document.getElementById("interventions2").value,
         piecesJoints:document.getElementById("piecesJoints2").value,
         texture:document.getElementById("texture2").value,
@@ -1346,7 +1494,8 @@ clearIndividualValues: function(){
         },
         notes:{
           sources:document.getElementById("sources2").value,
-          comments:document.getElementById("comments2").value
+          comments:document.getElementById("comments2").value,
+          figureCaption:document.getElementById("figureCaption2").value,
         },
       },
       work:{
@@ -1357,7 +1506,8 @@ clearIndividualValues: function(){
         chronologicalProcess:document.getElementById("chronologicalProcess").value,
         duration:document.getElementById("duration").value,
         notes:{
-          comments:document.getElementById("comments3").value
+          comments:document.getElementById("comments3").value,
+          figureCaption:document.getElementById("figureCaption3").value,
         },
       },
     },
@@ -1369,23 +1519,26 @@ clearIndividualValues: function(){
         analysis:analysisDetails,
         binderFiller:binderFillerDetails,
         c_14:c_14Details,
+        colorimetry:colorimetryDetails,
         drms:drmsDetails,
         fors:forsDetails,
-        fr_ir:fr_irDetails,
+        ft_ir:ft_irDetails,
         gc_ms:gc_msDetails,
         gl:glDetails,
         granulometry:granulometryDetails,
         hygroscopic:hygroscopicDetails,
         irpIrrIrfc:irpIrrIrfcDetails,
         libs:libsDetails,
+        ol:olDetails,
         om:omDetails,
         pige:pigeDetails,
         pixe:pixeDetails,
+        plm:plmDetails,
         rbs:rbsDetails,
         rs:rsDetails,
-        rtg:rtgDetails,
         scanning:scanningDetails,
         semSemEdx:semSemEdxDetails,
+        synchrotron:synchrotronDetails,
         tem:temDetails,
         tl:tlDetails,
         tlc:tlcDetails,
@@ -1394,11 +1547,21 @@ clearIndividualValues: function(){
         vis:visDetails,
         xrd:xrdDetails,
         xrf:xrfDetails,
+        xrr:xxrDetails,
       },
     },
   }
   console.log(itemDetails);
-  Meteor.call("insertItem", itemDetails);
+  var itemId = Session.get("itemId");
+  if (!Session.get("itemId")){
+    Meteor.call("insertItem", itemDetails);
+    var route = Prospero.findOne(itemDetails)._id;
+    Router.go("/gallery/details/"+itemId);
+  } else {
+    Meteor.call("updateItem", itemId, itemDetails);
+    delete Session.keys.itemId;
+    Router.go("/gallery/details/"+itemId);
+  }
   alert("["+itemDetails.basic.title+"] successfully updated");
   },
   updateData: function(){

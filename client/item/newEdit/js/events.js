@@ -3,15 +3,9 @@ Template.item_new.events({
   'submit .js-input-painting-data':function(event){
     event.preventDefault();
     Meteor.myFunctions.insertData();
-//    var user = Meteor.user().username;
-
-//    if (user != "admin"){
-//      Router.go("/database/myitems");
-//    } else {
-//      Router.go("/admin/prosperoDB");
-//    }
-
-  },
+  },'click .upload_label':function(event){
+     $(".upload-progress").css({"display":"block"});
+  }
 })
 
 Template.form_research.events({

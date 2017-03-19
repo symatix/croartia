@@ -24,3 +24,12 @@ Template.item_details.helpers({
     }
   }
 })
+Template.form_research.helpers({
+  editObject:function(){
+    var itemId = this._id;
+
+    if(!itemId){
+      return true;
+    }
+  }
+})

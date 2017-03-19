@@ -1,66 +1,143 @@
-<template name="item_details_basic">        
+<template name="item_details_basic">   
+  <h3></h3>     
 <!-- first col -->
-	<h3>basic information</h3>
-        <div class="form-box">
+  <div class="row form-box">
+        <div class="col-xs-12 col-sm-7">
+        {{#if basic.author}}
           <div class="author">
-            <div class="individual-property-display">Author:
-              <span class="individual-value-display">{{basic.author}}</span>
+            <div class="individual-property-display">Author:<br/>
+              <div class="individual-value-display">{{basic.author}}</div>
             </div>
           </div>
+          {{/if}}
+        {{#if basic.title}}
           <div class="title">
-            <div class="individual-property-display">Title:
-              <span class="individual-value-display">{{basic.title}}</span>
+            <div class="individual-property-display">Title:<br/>
+              <div class="individual-value-display">{{basic.title}}</div>
             </div>
           </div>
+          {{/if}}
+        {{#if basic.date}}
           <div class="date">
-            <div class="individual-property-display">Date:
-              <span class="individual-value-display">{{basic.date}}</span>
+            <div class="individual-property-display">Date:<br/>
+              <div class="individual-value-display">{{basic.date}}</div>
             </div>
           </div>
-          <div class="period-style">
-            <div class="individual-property-display">Dimensions without frame (cm):
-              <span class="individual-value-display">{{basic.period_style}}</span>
+          {{/if}}
+        {{#if basic.dimensions_noFrame}}
+          <div class="basic.dimensions_noFrame">
+            <div class="individual-property-display">Dimensions without frame (cm):<br/>
+              <div class="individual-value-display">{{basic.dimensions_noFrame}}</div>
             </div>
           </div>
-          <div class="collection-owner">
-            <div class="individual-property-display">Dimensions with frame (cm):
-              <span class="individual-value-display">{{basic.collection_owner}}</span>
+          {{/if}}
+        {{#if basic.dimensions_frame}}
+          <div class="dimensions_frame">
+            <div class="individual-property-display">Dimensions with frame (cm):<br/>
+              <div class="individual-value-display">{{basic.dimensions_frame}}</div>
           	</div>
           </div>
-          <div class="museum-gallery">
-            <div class="individual-property-display">Technique:
-              <span class="individual-value-display">{{basic.museum_gallery}}</span>
+          {{/if}}
+        {{#if basic.technique}}
+          <div class="technique">
+            <div class="individual-property-display">Technique:<br/>
+              <div class="individual-value-display">{{basic.technique}}</div>
             </div>
           </div>
-          <div class="painting-technique">
-            <div class="individual-property-display">Original owner:
-              <span class="individual-value-display">{{basic.painting_technique}}</span>
+          {{/if}}
+        {{#if basic.originalOwner}}
+          <div class="originalOwner">
+            <div class="individual-property-display">Original owner:<br/>
+              <div class="individual-value-display">{{basic.originalOwner}}</div>
             </div>
           </div>
-          <div class="stretcher">
-            <div class="individual-property-display">Original location:
-              <span class="individual-value-display">{{basic.stretcher}}</span>
+          {{/if}}
+        {{#if basic.originalLocation}}
+          <div class="originalLocation">
+            <div class="individual-property-display">Original location:<br/>
+              <div class="individual-value-display">{{basic.originalLocation}}</div>
             </div>
           </div>
-          <div class="support">
-            <div class="individual-property-display">Current location/storage:
-              <span class="individual-value-display">{{basic.support}}</span>
+          {{/if}}
+        {{#if basic.currentOwner}}
+          <div class="currentOwner">
+            <div class="individual-property-display">Current owner:<br/>
+              <div class="individual-value-display">{{basic.currentOwner}}</div>
             </div>
           </div>
-          <div class="priming">
-            <div class="individual-property-display">Inventory number(s):
-              <span class="individual-value-display">{{basic.priming}}</span>
+          {{/if}}
+        {{#if basic.currentLocation}}
+          <div class="currentLocation">
+            <div class="individual-property-display">Current location/storage:<br/>
+              <div class="individual-value-display">{{basic.currentLocation}}</div>
             </div>
           </div>
-          <div class="paint-layer">
-            <div class="individual-property-display">Responsible conservation authority:
-              <span class="individual-value-display">{{basic.paint_layer}}</span>
+          {{/if}}
+        {{#if basic.inventoryNumber}}
+          <div class="inventoryNumber">
+            <div class="individual-property-display">Inventory number(s):<br/>
+              <div class="individual-value-display">{{basic.inventoryNumber}}</div>
             </div>
           </div>
-          <div class="varnish">
-            <div class="individual-property-display">Legal status of conservation protection:
-              <span class="individual-value-display">{{basic.varnish}}</span>
+          {{/if}}
+        {{#if basic.authority}}
+          <div class="authority">
+            <div class="individual-property-display">Responsible conservation authority:<br/>
+              <div class="individual-value-display">{{basic.authority}}</div>
             </div>
           </div>
+          {{/if}}
+        {{#if basic.legalStatus}}
+          <div class="legalStatus">
+            <div class="individual-property-display">Legal status of conservation protection:<br/>
+              <div class="individual-value-display">{{basic.legalStatus}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if basic.investigated}}
+          <div class="investigated">
+            <div class="individual-property-display">Investigated by following methods/techniques:<br/>
+              <div class="individual-value-display">{{basic.investigated}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if basic.projectName}}
+          <div class="projectName">
+            <div class="individual-property-display">Related conservation/restoration/investigation project name:<br/>
+              <div class="individual-value-display">{{basic.projectName}}</div>
+            </div>
+          </div>
+          {{/if}}
+        {{#if basic.summaryProjects}}
+          <div class="summaryProjects">
+            <div class="individual-property-display">Summary of project/conservation/restoration and investigation works:<br/>
+              <div class="individual-value-display">{{basic.summaryProjects}}</div>
+            </div>
+          </div>
+          {{/if}}
          </div><!-- /second col -->
+         <!-- images check col -->
+          <div class="col-xs-5 add-bottom-space">
+              {{> item_details_images}}
+            </div>
+          <!-- /images col -->
+        {{#if basic.notes.notes.provenance}}
+        <div class="col-md-12 align-center">
+          <div class="samples">
+            <div class="individual-property-display">Short overview of provenance:<br/>
+              <div class="individual-value-display">{{basic.notes.notes.provenance}}</div>
+            </div>
+          </div>
+        </div>
+        {{/if}}
+        {{#if basic.notes.notes.comments}}
+        <div class="col-md-12 align-center">
+          <div class="artHistory">
+            <div class="individual-property-display">Comments:<br/>
+              <div class="individual-value-display">{{basic.notes.notes.comments}}</div>
+            </div>
+          </div>
+        </div>
+        {{/if}}
+        </div>
 </template>

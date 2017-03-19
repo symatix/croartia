@@ -51,7 +51,7 @@ PaintingIndex = new EasySearch.Index({
     // user search - has to filter hidden items
         selector: function(searchObject, options, aggregation) {
             var selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
-            selector.type = "Pictures"
+            selector.type = "Painting"
             //console.log(selector);
             return selector;
         },

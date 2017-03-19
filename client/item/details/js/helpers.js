@@ -1,0 +1,484 @@
+Template.registerHelper("isEmpty", function (object) {
+    return jQuery.isEmpty(object);
+});
+
+Template.materials_original.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).data.original.photoOne;
+		var pic2 = Prospero.findOne(itemId).data.original.photoTwo;
+		var pic3 = Prospero.findOne(itemId).data.original.photoThree;
+		var pic4 = Prospero.findOne(itemId).data.original.photoFour;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.materials_interventions.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).data.interventions.photoOne;
+		var pic2 = Prospero.findOne(itemId).data.interventions.photoTwo;
+		var pic3 = Prospero.findOne(itemId).data.interventions.photoThree;
+		var pic4 = Prospero.findOne(itemId).data.interventions.photoFour;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.materials_work.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).data.work.photoOne;
+		var pic2 = Prospero.findOne(itemId).data.work.photoTwo;
+		var pic3 = Prospero.findOne(itemId).data.work.photoThree;
+		var pic4 = Prospero.findOne(itemId).data.work.photoFour;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_aas.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.aas.files.aasFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.aas.files.aasFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.aas.files.aasFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.aas.files.aasFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_aes.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.aes.files.aesFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.aes.files.aesFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.aes.files.aesFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.aes.files.aesFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_afm.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.afm.files.afmFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.afm.files.afmFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.afm.files.afmFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.afm.files.afmFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_analysis.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.analysis.files.analysisFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.analysis.files.analysisFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.analysis.files.analysisFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.analysis.files.analysisFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_binderFiller.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.analysis.files.analysisFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.analysis.files.analysisFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.analysis.files.analysisFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.analysis.files.analysisFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_c_14.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.c_14.files.c_14Files1;
+		var pic2 = Prospero.findOne(itemId).details.methods.c_14.files.c_14Files2;
+		var pic3 = Prospero.findOne(itemId).details.methods.c_14.files.c_14Files3;
+		var pic4 = Prospero.findOne(itemId).details.methods.c_14.files.c_14Files4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_colorimetry.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.colorimetry.files.colorimetryFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.colorimetry.files.colorimetryFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.colorimetry.files.colorimetryFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.colorimetry.files.colorimetryFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_drms.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.drms.files.drmsFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.drms.files.drmsFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.drms.files.drmsFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.drms.files.drmsFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_fors.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.fors.files.forsFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.fors.files.forsFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.fors.files.forsFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.fors.files.forsFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_ft_ir.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.ft_ir.files.ft_irFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.ft_ir.files.ft_irFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.ft_ir.files.ft_irFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.ft_ir.files.ft_irFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_gc_ms.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.gc_ms.files.gc_msFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.gc_ms.files.gc_msFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.gc_ms.files.gc_msFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.gc_ms.files.gc_msFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_gl.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.gl.files.glFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.gl.files.glFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.gl.files.glFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.gl.files.glFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_granulometry.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.granulometry.files.granulometryFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.granulometry.files.granulometryFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.granulometry.files.granulometryFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.granulometry.files.granulometryFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_hygroscopic.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.hygroscopic.files.hygroscopicFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.hygroscopic.files.hygroscopicFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.hygroscopic.files.hygroscopicFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.hygroscopic.files.hygroscopicFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_irpIrrIrfc.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.irpIrrIrfc.files.irpIrrIrfcFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.irpIrrIrfc.files.irpIrrIrfcFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.irpIrrIrfc.files.irpIrrIrfcFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.irpIrrIrfc.files.irpIrrIrfcFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_libs.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.libs.files.libsFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.libs.files.libsFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.libs.files.libsFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.libs.files.libsFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_ol.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.ol.files.olFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.ol.files.olFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.ol.files.olFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.ol.files.olFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_om.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.om.files.omFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.om.files.omFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.om.files.omFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.om.files.omFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_pige.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.pige.files.pigeFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.pige.files.pigeFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.pige.files.pigeFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.pige.files.pigeFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_pixe.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.pixe.files.pixeFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.pixe.files.pixeFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.pixe.files.pixeFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.pixe.files.pixeFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_plm.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.plm.files.plmFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.plm.files.plmFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.plm.files.plmFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.plm.files.plmFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_rbs.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.rbs.files.rbsFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.rbs.files.rbsFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.rbs.files.rbsFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.rbs.files.rbsFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_rs.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.rs.files.rsFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.rs.files.rsFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.rs.files.rsFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.rs.files.rsFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_scanning.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.scanning.files.scanningFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.scanning.files.scanningFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.scanning.files.scanningFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.scanning.files.scanningFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_semSemEdx.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.semSemEdx.files.semSemEdxFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.semSemEdx.files.semSemEdxFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.semSemEdx.files.semSemEdxFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.semSemEdx.files.semSemEdxFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_synchrotron.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.synchrotron.files.synchrotronFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.synchrotron.files.synchrotronFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.synchrotron.files.synchrotronFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.synchrotron.files.synchrotronFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_tem.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.tem.files.temFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.tem.files.temFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.tem.files.temFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.tem.files.temFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_tl.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.tl.files.tlFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.tl.files.tlFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.tl.files.tlFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.tl.files.tlFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_tlc.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.tlc.files.tlcFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.tlc.files.tlcFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.tlc.files.tlcFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.tlc.files.tlcFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_uv_vis.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.uv_vis.files.uv_visFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.uv_vis.files.uv_visFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.uv_vis.files.uv_visFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.uv_vis.files.uv_visFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_uvf.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.uvf.files.uvfFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.uvf.files.uvfFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.uvf.files.uvfFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.uvf.files.uvfFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_vis.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.vis.files.visFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.vis.files.visFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.vis.files.visFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.vis.files.visFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_uvf.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.uvf.files.uvfFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.uvf.files.uvfFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.uvf.files.uvfFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.uvf.files.uvfFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_vis.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.vis.files.visFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.vis.files.visFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.vis.files.visFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.vis.files.visFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_xrd.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.xrd.files.xrdFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.xrd.files.xrdFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.xrd.files.xrdFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.xrd.files.xrdFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_xrf.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.xrf.files.xrfFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.xrf.files.xrfFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.xrf.files.xrfFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.xrf.files.xrfFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})
+Template.method_techniques_view_xrr.helpers({
+	originalObj:function(){
+		var itemId = this._id;
+		var pic1 = Prospero.findOne(itemId).details.methods.xrr.files.xrrFiles1;
+		var pic2 = Prospero.findOne(itemId).details.methods.xrr.files.xrrFiles2;
+		var pic3 = Prospero.findOne(itemId).details.methods.xrr.files.xrrFiles3;
+		var pic4 = Prospero.findOne(itemId).details.methods.xrr.files.xrrFiles4;
+		if (pic1 || pic2 || pic3 || pic4){
+			return true;
+		}
+	}
+})

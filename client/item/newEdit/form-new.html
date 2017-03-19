@@ -1,6 +1,7 @@
 <template name="form_research">
 
 <div class="row">
+    {{#if editObject}}
     <ul class="nav nav-tabs nav-justified" role="tablist" id="form-basic-select">
         <li role="presentation">
             <a class="a-heading-tab" href="#objectTypeForm" aria-controls="objectTypeForm" role="tab" data-toggle="tab">
@@ -54,11 +55,13 @@
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in" id="objectTypeForm">
                 {{> object_basic}}
+
+
             </div>
             <div role="tabpanel" class="tab-pane fade in" id="pigment-dye-binder">
                 {{> pigment_dye_binder}}
-            </div>
 
+            </div>
             <!--
             <div role="tabpanel" class="tab-pane fade in" id="other">
             <br/>
@@ -70,6 +73,12 @@
             </div>
             -->
         </div>
+        {{else}}
+        <h3 class="align-center">{{basic.author}} - {{basic.title}}</h3>
+                {{> object_basic}}
+    {{/if}}
+
+
 </div>
 <!-- does not work on template events - drity hack, but works oooooohhhhh yeaaa -->
 <script>
@@ -79,7 +88,6 @@ $('#form-basic-select li').click(function (e) {
  // $(this).tab('show');
      $(this).closest('ul').find('input[type="checkbox"]').prop('checked','');
      $(this).closest('li').find('input[type="checkbox"]').prop('checked','checked');
-     $(".upload-progress").css({"display":"block"});
    
 });
 </script>

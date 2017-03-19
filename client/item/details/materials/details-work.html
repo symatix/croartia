@@ -1,0 +1,71 @@
+<template name="materials_work">
+	{{#if materials.work.executor}}
+	<div class="col-md-6">
+	  <div class="executor">
+	    <div class="individual-property-display">Executor of treatment:<br/>
+	      <div class="individual-value-display">{{materials.work.executor}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.work.responsiblePerson}}
+	<div class="col-md-6">
+	  <div class="responsiblePerson">
+	    <div class="individual-property-display">Responsible person/leader of works:<br/>
+	      <div class="individual-value-display">{{materials.work.responsiblePerson}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.work.investor}}
+	<div class="col-md-6">
+	  <div class="investor">
+	    <div class="individual-property-display">Investor:<br/>
+	      <div class="individual-value-display">{{materials.work.investor}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.work.people}}
+	<div class="col-md-6">
+	  <div class="people">
+	    <div class="individual-property-display">People involved in treatment:<br/>
+	      <div class="individual-value-display">{{materials.work.people}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.work.chronologicalProcess}}
+	<div class="col-md-6">
+	  <div class="chronologicalProcess">
+	    <div class="individual-property-display">Processes in a chronological order:<br/> 
+	      <div class="individual-value-display">{{materials.work.chronologicalProcess}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.work.duration}}
+	<div class="col-md-6">
+	  <div class="duration">
+	    <div class="individual-property-display">Date/duration of the treatment (MM/YYYY-MM/YYYY):<br/> 
+	      <div class="individual-value-display">{{materials.work.duration}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.work.notes.comments}}
+	<div class="col-md-12 align-center">
+	  <div class="artHistory">
+	    <div class="individual-property-display">Comments:<br/>
+	      <div class="individual-value-display">{{materials.work.notes.comments}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+
+	<!-- 
+	missing - Fillers / Short overview of art history
+	2add
+	-->
+
+</template>

@@ -1,4 +1,4 @@
-Template.files_methods_fr_ir.events({
+Template.files_methods_ft_ir.events({
   'change #fr_irFiles1_label': function(event, template) {
     event.preventDefault();
       FS.Utility.eachFile(event, function(file) {

@@ -1,17 +1,75 @@
 <template name="item_details_images">
-	<h3>images</h3>
-	<div class="form-box"> <!--lazy to make a new class - this one works just fine -->
+    <div class="row img-box align-center">
 		{{#if data.basic.front}}
-			<img class="img-details-sm" src="{{data.basic.front}}" data-toggle="modal" data-target="#thumb-modal-front">
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.basic.front}}" data-toggle="modal" data-target="#thumb-modal-front">
+		</div>
 		{{/if}}
 		{{#if data.basic.back}}
-			<img class="img-details-sm" src="{{data.basic.back}}" data-toggle="modal" data-target="#thumb-modal-back">
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.basic.back}}" data-toggle="modal" data-target="#thumb-modal-back">
+		</div>
 		{{/if}}
 		{{#if data.basic.side}}
-			<img class="img-details-sm" src="{{data.basic.side}}" data-toggle="modal" data-target="#thumb-modal-side">
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.basic.side}}" data-toggle="modal" data-target="#thumb-modal-side">
+		</div>
 		{{/if}}
 		{{#if data.basic.signature}}
-			<img class="img-details-sm" src="{{data.basic.signature}}" data-toggle="modal" data-target="#thumb-modal-signature">
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.basic.signature}}" data-toggle="modal" data-target="#thumb-modal-signature">
+		</div>
+		{{/if}}
+		{{#if materials.original.notes.figureCaption}}
+		<div class="col-md-12">
+		  <div class="figureCaption">
+		    <div class="individual-property-display">Figure captions<br/> 
+		      <div class="individual-value-display">{{materials.original.notes.figureCaption}}</div>
+		    </div>
+		  </div>
+		</div>
+		{{/if}}
+	</div>
+</template>
+
+<template name="item_original_images">
+    <div class="row img-box align-center">
+		{{#if data.basic.front}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.basic.front}}" data-toggle="modal" data-target="#thumb-modal-front">
+		</div>
+		{{/if}}
+		{{#if data.basic.back}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.basic.back}}" data-toggle="modal" data-target="#thumb-modal-back">
+		</div>
+		{{/if}}
+		{{#if data.basic.side}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.basic.side}}" data-toggle="modal" data-target="#thumb-modal-side">
+		</div>
+		{{/if}}
+		{{#if data.basic.signature}}
+		<div class="col-xs-6">
+		<h4>&nbsp;</h4>
+			<img class="img-materials-sm" src="{{data.basic.signature}}" data-toggle="modal" data-target="#thumb-modal-signature">
+		</div>
+		{{/if}}
+		{{#if materials.original.notes.figureCaption}}
+		<div class="col-md-12">
+		  <div class="figureCaption">
+		    <div class="individual-property-display">Figure captions<br/> 
+		      <div class="individual-value-display">{{materials.original.notes.figureCaption}}</div>
+		    </div>
+		  </div>
+		</div>
 		{{/if}}
 	</div>
 </template>

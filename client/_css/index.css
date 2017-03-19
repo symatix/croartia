@@ -97,6 +97,12 @@ input[type="text"], input[type="password"], input[type="file"]{
   border-width: 0px 0px 1px 0px;
   margin-left:25px;
 }
+td{
+  padding-right:10px;
+}
+tr{
+  border-bottom:2px solid #262626;
+}
 #input-basic-search{
   width:250px;
   border-radius:4px;
@@ -135,7 +141,7 @@ h3 {
   color:#808080;
 }
 h4 {
-  font-family:valueBold;
+  font-family:valueRegular;
   font-size:22px;
   padding:8px;
   border-radius:8px;
@@ -189,9 +195,9 @@ img{
 .img-upload{
   max-width:600px;
 }
-.img-edit{
-  width:100%;
-  height:auto;
+img.img-edit{
+  max-width:100%;
+  max-height:270px;
   margin-bottom:10px;
   border-radius:3px;
 }
@@ -212,6 +218,12 @@ img{
   text-align:center;
   color:white;
   text-shadow: 0 0 10px #ffffff;
+}
+h1{
+  font-family:logoBold;
+  font-size:60px;
+  text-align:center;
+  color:white;
 }
 .prospero-login{
   font-family:logoBold;
@@ -248,6 +260,10 @@ img{
   margin:10px 0px 0px 0px;
   padding:10px;
 }
+.form-box-font{
+  font-family:valueThin;
+  font-size:20px;
+}
 .form-box-counter{
   background: -webkit-linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
@@ -260,7 +276,13 @@ img{
   margin:10px 0px 0px 0px;
   padding:10px;
 }
+.download-files{
+  font-family:valueThin;
+  font-size:20px;
+  color:#999999;
+}
 .download-link{
+  font-size:18px;
   color:#ffffff;
 }
 .download-link:hover{
@@ -387,6 +409,9 @@ img{
     min-width: 300px;
     max-width:90%;
 }
+.modal-title{
+  color:#999999;
+}
 .underline{
   text-decoration:underline;
 }
@@ -421,7 +446,8 @@ img{
 }
 .img-list{
   display:block;
-  width:100%;
+  max-width:100%;
+  max-height:200px;
   margin: 10px 0 10px 0;
   box-shadow:0 0 6px black;
 }
@@ -536,7 +562,9 @@ button, .btn-submit:focus{
   color:#1a1300;
   background-color:#e6e6e6;
 }
-
+.img-list{
+  margin:5px auto;
+}
 
 
 
@@ -555,9 +583,8 @@ button, .btn-submit:focus{
   background-color:rgba(0,0,0,0.6);
   border-radius:5px;
   box-shadow: 0 0 8px #ffffff;
-  width:40%;
-  margin:5%;
   padding:10px;
+  margin-bottom:6%;
 }
 .item-list-heading{
   background-color:#404040;
@@ -663,9 +690,9 @@ button, .btn-submit:focus{
   padding-left:40px;
 }
 .individual-property-display{
-  font-family:logoThin;
   color:#999999 !important;
   font-size:20px;
+  font-style:italic;
 }
 .individual-img-display{
   font-family:valueThin;
@@ -674,12 +701,31 @@ button, .btn-submit:focus{
 }
 .img-details-sm{
   /*box-shadow: 0 0 8px #ffffff;*/
-  max-width:48%;
+  max-width:100%;
   border-radius:5px;
   max-height:250px;
+  margin-top:-10px;
+  margin-bottom:10px;
+  box-shadow: 0 0 4px #ffffff;
 }
 .img-details-sm:hover{
   opacity:0.8;
+}
+.img-box{
+  background-color:rgba(0,0,0,0.9);
+  margin:0;
+  border-left: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  border-radius:5px;
+}
+.img-materials-sm{
+  max-width:100%;
+  border-radius:5px;
+  max-height:130px;
+  margin-top:-10px;
+  margin-bottom:10px;
+  box-shadow: 0 0 4px #ffffff;
+
 }
 .individual-value{
   font-family:valueRegular !important;
@@ -704,8 +750,9 @@ button, .btn-submit:focus{
   width:300px;
 }
 .individual-value-display{
-  font-family:valueRegular;
-  color:#1a1100;
+  color:#ffffff;
+  font-style:normal;
+  margin-left:5%;
 }
 .dashed-border{
   border-bottom:2px dashed lightgray;
@@ -817,19 +864,21 @@ textarea #sources1{
   margin-top:65px;
 }
 .nav-pills>li>a{
-  color: #808080;
-  font-family:logoBold;
+  color: #ffffff;
+  font-family:valueRegular;
   font-size:15px;
 }
-.nav-pills>li{
+.nav-pills>li>a{
   text-align:center;
   border-radius:5px;
-  background-color:rgba(0,0,0,0.8);
-  box-shadow: 0 0 8px #ffffff;
+  background-color:rgba(0,0,0,0.4);
+}
+.nav-pills>li>a:hover{
+  background-color:rgba(255,255,255,0.3);
 }
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-  color: white !important;
-  background-color:rgba(255,255,255,0);
+  color: #000000 !important;
+  background:rgb(255,255,255);
 }
 .method-checkbox{
   position:relative;
@@ -896,7 +945,16 @@ input.checkbox-input{
 .upload-progress{
   display:none;
 }
+.objectBranch{
+  height:380px;
+}
 .objectBranch:hover{
   background-color:#f2f2f2 !important;
   color:#333333 !important;
+}
+.materials-details-box {
+  margin-top:20px;
+}
+input.checkbox-input-view{
+  display:none;
 }

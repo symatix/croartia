@@ -1,25 +1,23 @@
 <template name="dev">
 <pre>
+*** NOTES ***
+create full object on initial startup for painting (server side)
+preformat on textarea display (sources/line break)
+verification on objectType > prevent data entry of foreign objects
+
+
 *** THOUGHTS ***
 remove search from landing > branching search
 add public/private selectbox on form > selector for guest/user and admin
-links on landing branch
-
 
 
 *** DOING ***
-details view (basic)
-type input for branching
-material input
-clear leftovers
-
-search on prospero.basic
+type input for branching (render diff input templates)
+#!clear leftovers
 
 *** TO DO ***
 ----------------
-landing page - type branching
-----------------
-change name - CROARTIA
+change name - CROARTIA (admin/editor)
 ----------------
 material input form / combine methods from objectType
 ----------------
@@ -39,11 +37,18 @@ test multiple user case
 unknown
 
 *** POSSIBLE IMPROVEMENTS ***
-
-write data to /public if multiple user updates every client
 brake buttons to templates
 
 *** CHANGES ***
+ * v0.29
+  edit done - upload progress
+  function branch > new > edit
+  display details
+    - basic
+    - materials
+    - methods
+    - downloads
+
  * v0.28
   input form objectType 
     - all fields + files + notes input
