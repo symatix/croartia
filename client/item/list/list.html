@@ -1,7 +1,11 @@
 <template name="painting_list">
   <div class="container-fluid">
-    <h1 class="prospero">CROARTIA</h1><h2 class="subhead"> ART & RESEARCH DATABASE</h2>
-      <h3 class="welcome-msg">pictures</h3>
+
+
+    <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}} } {{/if}}
+      <a class="a-heading" href="/">croARTia </a>
+    </h1>
+
     <div class="container margin-top">
       <div class="row">
         <ul>

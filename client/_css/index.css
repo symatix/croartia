@@ -958,3 +958,9 @@ input.checkbox-input{
 input.checkbox-input-view{
   display:none;
 }
+#methods_href{
+  display:none;
+}
+#submit_href{
+  display:none;
+}

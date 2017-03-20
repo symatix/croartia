@@ -31,5 +31,5 @@ Template.form_research.helpers({
     if(!itemId){
       return true;
     }
-  }
+  },
 })

@@ -3,18 +3,7 @@
     <div class="container">
     <h1 class="breadcrumbs">{{#if currentUser}}{{currentUser.username}} } {{/if}}
       <a class="a-heading" href="/">croARTia </a>/
-      {{#if currentUser}}
-        {{#if admin}}
-          <a class="a-heading" href="/admin/prosperoDB"> manageDB </a>/
-        {{else}}
-          <a class="a-heading" href="/database/myitems"> my entries </a>/
-        {{/if}}
-      {{/if}}
-      <!--
-      {{#if currentUser}}
-        <a class="a-heading" href="/database/myitems">my entries </a>/
-      {{/if}}
-      -->
+      <a class="a-heading" href="/paintings">paintings </a>/
       <span class="post-heading"> details<br/>
         {{basic.author}} - {{basic.title}}
       </span>

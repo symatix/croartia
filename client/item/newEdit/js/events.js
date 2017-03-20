@@ -1,11 +1,16 @@
 // web ("/new") > local ("item/item-new")
 Template.item_new.events({
+  'click .upload_label':function(event){
+    $(".upload-progress").css({"display":"block"});
+  },
+  'click .a-heading-tab':function(event){
+    $("#methods_href").css({"display":"block"});
+    $("#submit_href").css({"display":"block"});
+  },
   'submit .js-input-painting-data':function(event){
     event.preventDefault();
     Meteor.myFunctions.insertData();
-  },'click .upload_label':function(event){
-     $(".upload-progress").css({"display":"block"});
-  }
+  },
 })
 
 Template.form_research.events({
