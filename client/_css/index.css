@@ -4,7 +4,6 @@
 }
 /* CSS declarations go here */
 /* navbar collapse breakpoint */
-
 @media (max-width: 1300px) {
   .navbar-header {
       float: none;
@@ -97,11 +96,31 @@ input[type="text"], input[type="password"], input[type="file"]{
   border-width: 0px 0px 1px 0px;
   margin-left:25px;
 }
+input::-webkit-input-placeholder {
+color: #333333 !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: #333333 !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #333333 !important;  
+}
+ 
+input:-ms-input-placeholder {  
+color: #333333 !important;  
+}
 td{
   padding-right:10px;
 }
 tr{
   border-bottom:2px solid #262626;
+}
+pre{
+  all:inherit;
+  text-align:left;
+  white-space: pre-line;
 }
 #input-basic-search{
   width:250px;
@@ -194,6 +213,11 @@ img{
 }
 .img-upload{
   max-width:600px;
+}
+.img-form{
+  max-width:150px;
+  max-height:150px;
+  margin:10px 20px;
 }
 img.img-edit{
   max-width:100%;
@@ -585,6 +609,7 @@ button, .btn-submit:focus{
   box-shadow: 0 0 8px #ffffff;
   padding:10px;
   margin-bottom:6%;
+  min-height:350px;
 }
 .item-list-heading{
   background-color:#404040;
@@ -876,6 +901,10 @@ textarea #sources1{
 .nav-pills>li>a:hover{
   background-color:rgba(255,255,255,0.3);
 }
+.nav-pills>li>a:focus{
+  color: #ffffff !important;
+  background:rgba(75,75,75,0.7);
+}
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
   color: #000000 !important;
   background:rgb(255,255,255);
@@ -886,6 +915,12 @@ textarea #sources1{
   width:100%;
 }
 .method-checkbox:hover{
+  cursor:pointer;
+  color:#0d0d0d;
+  background:#ffffff;
+  box-shadow: 0 0 6px #ffffff;
+}
+.method-checkbox:active{
   cursor:pointer;
   color:#0d0d0d;
   background:#ffffff;
@@ -947,6 +982,7 @@ input.checkbox-input{
 }
 .objectBranch{
   height:380px;
+  margin-bottom:5%;
 }
 .objectBranch:hover{
   background-color:#f2f2f2 !important;
@@ -962,5 +998,8 @@ input.checkbox-input-view{
   display:none;
 }
 #submit_href{
+  display:none;
+}
+.toggle{
   display:none;
 }

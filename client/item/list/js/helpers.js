@@ -7,44 +7,58 @@ Template.painting_list.helpers({
   username:function(){
     return Meteor.user().profile.full_name;
   },
-  noDataTechnique:function(){
-    if(Prospero.findOne({_id:this.__originalId}).basic.painting_technique == ""){
-      return true;
-    }
+})
+Template.sculpture_list.helpers({
+  sculptureIndex: () => SculptureIndex,
+  loadBtn:function(){
+    return {class:"btn btn-default btn-submit float-right"}
   },
-  noDataDate:function(){
-    if(Prospero.findOne({_id:this.__originalId}).basic.date == ""){
-      return true;
-    }
+  username:function(){
+    return Meteor.user().profile.full_name;
   },
-  noDataPaint:function(){
-    if(Prospero.findOne({_id:this.__originalId}).basic.paint_layer== ""){
-      return true;
-    }
+})
+Template.architectural_list.helpers({
+  architecturalIndex: () => ArchitecturalIndex,
+  loadBtn:function(){
+    return {class:"btn btn-default btn-submit float-right"}
   },
-  noDataAuthor:function(){
-    if(Prospero.findOne({_id:this.__originalId}).basic.author == ""){
-      return true;
-    }
+  username:function(){
+    return Meteor.user().profile.full_name;
   },
-  noDataTitle:function(){
-    if(Prospero.findOne({_id:this.__originalId}).basic.title == ""){
-      return true;
-    }
+})
+Template.archival_list.helpers({
+  archivalIndex: () => ArchivalIndex,
+  loadBtn:function(){
+    return {class:"btn btn-default btn-submit float-right"}
   },
-  noDataOwner:function(){
-    if(Prospero.findOne({_id:this.__originalId}).basic.collection_owner == ""){
-      return true;
-    }
+  username:function(){
+    return Meteor.user().profile.full_name;
   },
-  noDataPeriod:function(){
-    if(Prospero.findOne({_id:this.__originalId}).basic.period_style == ""){
-      return true;
-    }
+})
+Template.archaeological_list.helpers({
+  archaeologicalIndex: () => ArchaeologicalIndex,
+  loadBtn:function(){
+    return {class:"btn btn-default btn-submit float-right"}
   },
-  noImg:function(){
-    if(Prospero.findOne({_id:this.__originalId}).data.imgs.img_front == ""){
-      return true;
-    }
-  }
+  username:function(){
+    return Meteor.user().profile.full_name;
+  },
+})
+Template.pigment_list.helpers({
+  pigmentIndex: () => PigmentIndex,
+  loadBtn:function(){
+    return {class:"btn btn-default btn-submit float-right"}
+  },
+  username:function(){
+    return Meteor.user().profile.full_name;
+  },
+})
+Template.other_list.helpers({
+  otherIndex: () => OtherIndex,
+  loadBtn:function(){
+    return {class:"btn btn-default btn-submit float-right"}
+  },
+  username:function(){
+    return Meteor.user().profile.full_name;
+  },
 })

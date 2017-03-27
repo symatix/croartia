@@ -1,27 +1,16 @@
 <template name="dev">
 <pre>
-*** NOTES ***
-create full object on initial startup for painting (server side)
-preformat on textarea display (sources/line break)
-verification on objectType > prevent data entry of foreign objects
-
-!! break function to small object > verification on objectType input
-
-
-*** THOUGHTS ***
-remove search from landing > branching search
-add public/private selectbox on form > selector for guest/user and admin
-
 
 *** DOING ***
-type input for branching (render diff input templates)
 #!clear leftovers
+style for admin/editor UI
+
 
 *** TO DO ***
 ----------------
-change name - CROARTIA (admin/editor)
+place {public} selector on index
 ----------------
-material input form / combine methods from objectType
+change name - CROARTIA (admin/editor)
 ----------------
 item form input verification (required fields)
 ----------------
@@ -38,14 +27,26 @@ test multiple user case
 
 unknown
 
-*** POSSIBLE IMPROVEMENTS ***
-brake buttons to templates
-
 *** CHANGES ***
+ * v0.31
+  form split into sections
+  new and edit
+    - same form
+    - different verification
+    - all objects input except samples
+  display style and verification if input present
+    - all objects except samples
+  affix fixed on url selection display
+  added public/private
+  
+
  * v0.30
   split methods from object > faster render
   file verification on download page > show only present files
   breadcrumbs on branching
+  basic search on pictureIndex
+  bugfix on editDocument - correct input
+  minor design flaws fixed
 
  * v0.29
   edit done - upload progress

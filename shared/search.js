@@ -1,13 +1,12 @@
-
-GalleryIndex = new EasySearch.Index({
+PaintingIndex = new EasySearch.Index({
   collection: Prospero,
-  name:'mainGallery',
+  name:'paintingGallery',
   fields: ["basic.author", "basic.title"],
   engine: new EasySearch.MongoDB({
     // user search - has to filter hidden items
         selector: function(searchObject, options, aggregation) {
             var selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
-            selector.type = {$ne:"hidden"}
+            selector.type = "Painting"
             //console.log(selector);
             return selector;
         },
@@ -43,15 +42,235 @@ GalleryIndex = new EasySearch.Index({
         },
   }),
 })
-PaintingIndex = new EasySearch.Index({
+SculptureIndex = new EasySearch.Index({
   collection: Prospero,
-  name:'paintingGallery',
+  name:'sculptureGallery',
   fields: ["basic.author", "basic.title"],
   engine: new EasySearch.MongoDB({
     // user search - has to filter hidden items
         selector: function(searchObject, options, aggregation) {
             var selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
-            selector.type = "Painting"
+            selector.type = "Sculpture"
+            //console.log(selector);
+            return selector;
+        },
+        sort: function (searchObject, options) {
+          const sortBy = options.search.props.sortBy
+
+          // return a mongo sort specifier
+          if ('last_entry' === sortBy) {
+            return {
+              "createdAt": -1
+            }
+          } else if ('first_entry' === sortBy) {
+            return {
+              "createdAt": 1
+            }
+          } else if ('title_a' === sortBy) {
+            return {
+              "basic.title": 1
+            }
+          } else if ('title_z' === sortBy) {
+            return {
+              "basic.title": -1
+            }
+          } else if ('author_a' === sortBy) {
+            return {
+              "basic.author": 1
+            }
+          } else if ('author_z' === sortBy) {
+            return {
+              "basic.author": -1
+            }
+          }
+        },
+  }),
+})
+ArchitecturalIndex = new EasySearch.Index({
+  collection: Prospero,
+  name:'architecturalGallery',
+  fields: ["basic.author", "basic.title"],
+  engine: new EasySearch.MongoDB({
+    // user search - has to filter hidden items
+        selector: function(searchObject, options, aggregation) {
+            var selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
+            selector.type = "Architectural heritage"
+            //console.log(selector);
+            return selector;
+        },
+        sort: function (searchObject, options) {
+          const sortBy = options.search.props.sortBy
+
+          // return a mongo sort specifier
+          if ('last_entry' === sortBy) {
+            return {
+              "createdAt": -1
+            }
+          } else if ('first_entry' === sortBy) {
+            return {
+              "createdAt": 1
+            }
+          } else if ('title_a' === sortBy) {
+            return {
+              "basic.title": 1
+            }
+          } else if ('title_z' === sortBy) {
+            return {
+              "basic.title": -1
+            }
+          } else if ('author_a' === sortBy) {
+            return {
+              "basic.author": 1
+            }
+          } else if ('author_z' === sortBy) {
+            return {
+              "basic.author": -1
+            }
+          }
+        },
+  }),
+})
+ArchivalIndex = new EasySearch.Index({
+  collection: Prospero,
+  name:'archivalGallery',
+  fields: ["basic.author", "basic.title"],
+  engine: new EasySearch.MongoDB({
+    // user search - has to filter hidden items
+        selector: function(searchObject, options, aggregation) {
+            var selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
+            selector.type = "Archival object"
+            //console.log(selector);
+            return selector;
+        },
+        sort: function (searchObject, options) {
+          const sortBy = options.search.props.sortBy
+
+          // return a mongo sort specifier
+          if ('last_entry' === sortBy) {
+            return {
+              "createdAt": -1
+            }
+          } else if ('first_entry' === sortBy) {
+            return {
+              "createdAt": 1
+            }
+          } else if ('title_a' === sortBy) {
+            return {
+              "basic.title": 1
+            }
+          } else if ('title_z' === sortBy) {
+            return {
+              "basic.title": -1
+            }
+          } else if ('author_a' === sortBy) {
+            return {
+              "basic.author": 1
+            }
+          } else if ('author_z' === sortBy) {
+            return {
+              "basic.author": -1
+            }
+          }
+        },
+  }),
+})
+ArchaeologicalIndex = new EasySearch.Index({
+  collection: Prospero,
+  name:'archaeologicalGallery',
+  fields: ["basic.author", "basic.title"],
+  engine: new EasySearch.MongoDB({
+    // user search - has to filter hidden items
+        selector: function(searchObject, options, aggregation) {
+            var selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
+            selector.type = "Archaeological object"
+            //console.log(selector);
+            return selector;
+        },
+        sort: function (searchObject, options) {
+          const sortBy = options.search.props.sortBy
+
+          // return a mongo sort specifier
+          if ('last_entry' === sortBy) {
+            return {
+              "createdAt": -1
+            }
+          } else if ('first_entry' === sortBy) {
+            return {
+              "createdAt": 1
+            }
+          } else if ('title_a' === sortBy) {
+            return {
+              "basic.title": 1
+            }
+          } else if ('title_z' === sortBy) {
+            return {
+              "basic.title": -1
+            }
+          } else if ('author_a' === sortBy) {
+            return {
+              "basic.author": 1
+            }
+          } else if ('author_z' === sortBy) {
+            return {
+              "basic.author": -1
+            }
+          }
+        },
+  }),
+})
+PigmentIndex = new EasySearch.Index({
+  collection: Prospero,
+  name:'pigmentGallery',
+  fields: ["basic.author", "basic.title"],
+  engine: new EasySearch.MongoDB({
+    // user search - has to filter hidden items
+        selector: function(searchObject, options, aggregation) {
+            var selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
+            selector.type = "Pigment/dye/binder/varnish/reference materials"
+            //console.log(selector);
+            return selector;
+        },
+        sort: function (searchObject, options) {
+          const sortBy = options.search.props.sortBy
+
+          // return a mongo sort specifier
+          if ('last_entry' === sortBy) {
+            return {
+              "createdAt": -1
+            }
+          } else if ('first_entry' === sortBy) {
+            return {
+              "createdAt": 1
+            }
+          } else if ('title_a' === sortBy) {
+            return {
+              "basic.title": 1
+            }
+          } else if ('title_z' === sortBy) {
+            return {
+              "basic.title": -1
+            }
+          } else if ('author_a' === sortBy) {
+            return {
+              "basic.author": 1
+            }
+          } else if ('author_z' === sortBy) {
+            return {
+              "basic.author": -1
+            }
+          }
+        },
+  }),
+})
+OtherIndex = new EasySearch.Index({
+  collection: Prospero,
+  name:'otherGallery',
+  fields: ["basic.author", "basic.title"],
+  engine: new EasySearch.MongoDB({
+    // user search - has to filter hidden items
+        selector: function(searchObject, options, aggregation) {
+            var selector = this.defaultConfiguration().selector(searchObject, options, aggregation);
+            selector.type = "other"
             //console.log(selector);
             return selector;
         },

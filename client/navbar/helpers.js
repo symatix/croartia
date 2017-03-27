@@ -7,25 +7,26 @@ Template.navbar.helpers({
       return true;
     }
   },
+  paintingIndex: () => PaintingIndex,
   adminIndex: () => AdminIndex,
   editorIndex: () => EditorIndex,
-  galleryIndex: () => GalleryIndex, // used for search
+
   searchAttributes:function(){
     return {placeholder: ' Search by author or title',
             id:'input-basic-search'}
   },
-  searchInput:function(){
+  paintingInput:function(){
     var routeName = Router.current().route.path();
-    var index = "/";
+    var index = "/Painting";
     if(routeName == index){
       return true;
     } else {
       return false;
     }
   },
-  galleryInput:function(){
+  sculptureInput:function(){
     var routeName = Router.current().route.path();
-    var index = "/";
+    var index = "/Sculpture";
     if(routeName == index){
       return true;
     } else {

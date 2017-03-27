@@ -3,6 +3,8 @@
 Meteor.methods({
 	insertItem:function(itemDetails){
     	Prospero.insert(itemDetails);
+    	var id = Prospero.findOne(itemDetails)._id;
+    	return id;
 	},
 	updateItem:function(itemId, itemDetails){
 		Prospero.upsert({_id:itemId},{$set:itemDetails});

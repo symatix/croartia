@@ -20,7 +20,7 @@ Meteor.startup(() => {
 		console.log("no data found > generating dummy input");
 		//pictures
 		Prospero.insert({
-			isPrivate:false,
+			visible:"public",
 		    type:"Painting",
 		    data:{
 		      basic:{
@@ -29,6 +29,16 @@ Meteor.startup(() => {
 		        side:"/1side.jpg",
 		        signature:"/1sig.jpg",
 		      	},
+		      original:{
+		          photoOne:"/original1.jpg",
+		          photoTwo:"/original2.jpg",
+		          photoThree:"/original3.jpg",
+		      },
+		      restoration:{
+		          photoOne:"/restoration1.jpg",
+		          photoTwo:"/restoration2.jpg",
+		          photoThree:"/restoration3.jpg",
+		      }
 		    },
 			basic:{
 				author:"Miroslav Kraljević",
@@ -60,7 +70,7 @@ Meteor.startup(() => {
 					filler:"Lead white pigment + unknown binder",
 					stretcher:"Jednostruki patentni klinasti podokvir, jelovina"
 				},
-				work:{
+				restoration:{
 					executor:"Mirna Međeral",
 					responsiblePerson:"Tamara Ukrainčik",
 					investor:"Academy of fine arts, Zagreb, Ministry of culture, Croatia",
@@ -72,9 +82,7 @@ Meteor.startup(() => {
 			},
 			details:{
 				methods:{
-					vis:{
-						experimentalParameters:"Black light, Canon EOS 80D, f4, 1/250",
-						notes:{
+					vis:{notes:{
 							caption:"Painting before conservation/restoration works; painting after conservation/restoration works; ack view of the painting",
 						},
 						files:{
@@ -83,6 +91,7 @@ Meteor.startup(() => {
 						}
 					},
 					uvf:{
+						experimentalParameters:"Black light, Canon EOS 80D, f4, 1/250",
 						notes:{
 							caption:"UVF photograph of the painting after removing dust and dirt",
 						},
@@ -103,7 +112,7 @@ Meteor.startup(() => {
 		});
 		//sculptures
 		Prospero.insert({
-				isPrivate:false,
+				visible:"public",
 			    type:"Sculpture",
 			    data:{
 			      basic:{
@@ -118,7 +127,7 @@ Meteor.startup(() => {
 		});
 		//Architectural heritage 
 		Prospero.insert({
-				isPrivate:false,
+				visible:"public",
 			    type:"Architectural heritage",
 			    data:{
 			      basic:{
@@ -133,7 +142,7 @@ Meteor.startup(() => {
 		});
 		//Archival object 
 		Prospero.insert({
-				isPrivate:false,
+				visible:"public",
 			    type:"Archival object",
 			    data:{
 			      basic:{
@@ -148,7 +157,7 @@ Meteor.startup(() => {
 		});
 		//Archaeological object 
 		Prospero.insert({
-				isPrivate:false,
+				visible:"public",
 			    type:"Archaeological object",
 			    data:{
 			      basic:{
@@ -163,22 +172,65 @@ Meteor.startup(() => {
 		});
 		//Pigment 
 		Prospero.insert({
-				isPrivate:false,
-			    type:"Pigment/dye/binder/varnish/reference materials",
-			    data:{
-			      basic:{
-			        front:"/dummy/pigment1.jpeg",
-			      	},
-			    },
-				basic:{
-					author:"Material Author",
-					title:"Title",
-					date:"10.11.2016",
+			visible:"public",
+		    type:"Pigment/dye/binder/varnish/reference materials",
+		    data:{
+		      basic:{
+		        front:"/pigment.jpg",
+		      	},
+		    },
+			basic:{
+				title:"Azurite",
+				appearence:"Blue pigment",
+				altName:"mountain blue (English), Azurit (German), azzurite (Italian)",
+				manufacturer:"Azurite MP, extra deep coarse, Kremer Pigmente Germany",
+				pigmentType:"natural and synthetic",
+				chemicalName:"Copper hydroxide carbonate, basic copper(II)- carbonate",
+				chemicalFormula:"2CuCO3.Cu(OH)2",
+				purity:"pure",
+				stateForm:"powder, extra deep coarse",
+				grainSize:"100-125 μm",
+				periodFrom:"Antiquity",
+				periodTo:"1700",
+				colorIndex:"PB 30",
+				investigated:"XRF, Raman spectrometry",
+		        notes:{
+		          briefDescription:"Azurite is composed of mineral basic carbonate of copper, found in many parts of the world in the upper oxidized portions of copper ore deposits. Azurite mineral is usually associated in nature with malachite, the green basic carbonate of copper that is far more abundant. Occasional use began with Egyptians, but it was uncommon until the Middle Ages when the manufacture of the ancient synthetic pigment &quot;Egyptian blue&quot; was forgotten. Produced artificially from the 17th century, it was replaced when &quot;Prussian blue&quot; is discovered in the 18th century. Azurite was the most important blue pigment in European painting throughout the middle ages and Renaissance. There are records of its use also in Japan and Ancient Egypt. Replaced when &quot;Prussian blue&quot; is discovered in the 18th century, azurite was the most important blue pigment in European painting throughout the middle ages and Renaissance. It was made artificially from the 17th century.",
+		          degradation:"the intensity of the blue is due to the presence of copper and the way it is chemically bound to the hydroxyl (OH) and carbonate (CO 3 ) groups. Azurite has good permanence in oil and tempera media, although it is subjected to two process of degradation into green or into black. Indeed, malachite, another naturally occurring copper mineral, is just a more oxidized form of the mineral azurite. Hence it is the increased 3 oxidation that causes the colour change from blue to green. The formula for the change includes the addition of a water molecule to that of two azurite molecule which releases one of carbon dioxide and leaves three malachite molecules. Oxidation is ongoing hence the slow transformation from blue to green. Azurite suffer also the alteration in a black pigment, the copper oxide, tenorite.",
+		          sources:"http://www.webexhibits.org/pigments/indiv/overview/azurite.html",
+		      	}
 			},
+			details:{
+				methods:{
+					rs:{
+						experimentalParameters:"785 nm laser, 45 s acquisition time, excitation/collection geometry: 90°/90°, beam size 7 mm",
+						bands:"403vs, 767m, 1098m",
+						notes:{
+							comments:"Comparison with University College London (UCL) database",
+							caption:"Raman spectrum of the azurite in powder form",
+						},
+						files:{
+							rsFiles1:"/rs-pigment.jpg",
+							rsFiles5:"/rs-pigment.spc",
+						}
+					},
+					xrf:{
+						experimentalParameters:"Rh transmission tube, 35 kV, 0.1 mA, air, tube-target- detector geometry: 90°(8mm)/45°(11mm), 1.5 mm beam size",
+						elements:"Cu, Ca, Si",
+						influence:"Ca and Cl from paper on which the pigment was placed",
+						pigmentsDyes:"lead white, vermilion, yellow ochre, burnt umber, red ochre, cobalt blue, black iron oxide, chrome oxide green, bone black",
+						priming:"Chalk with lead white",
+						files:{
+							xrfFiles1:"/xrf-pigment.jpg",
+							xrfFiles5:"/xrf-pigment.rar",
+						}
+					}
+				}
+			}
 		});
 		//Samples 
 		Prospero.insert({
-				isPrivate:false,
+				visible:"public",
 			    type:"Sample/cross-section",
 			    data:{
 			      basic:{
@@ -193,8 +245,8 @@ Meteor.startup(() => {
 		});
 		//Other 
 		Prospero.insert({
-				isPrivate:false,
-			    type:"Other",
+				visible:"public",
+			    type:"other",
 			    data:{
 			      basic:{
 			        front:"/dummy/other3.jpeg",
@@ -204,7 +256,7 @@ Meteor.startup(() => {
 					author:"Other Author",
 					title:"Title",
 					date:"10.11.2016",
-			},
+				},
 		});
 	var count = Prospero.find().count();
 	console.log("Inserted " + count + " dummy objects");

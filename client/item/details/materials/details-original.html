@@ -2,6 +2,15 @@
 <div class="row">
 	<div class="col-xs-7">
 		<div class="row">
+	{{#if materials.original.materials}}
+	<div class="col-md-12">
+	  <div class="materials">
+	    <div class="individual-property-display">Materials involved:<br/>
+	      <div class="individual-value-display">{{materials.original.materials}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
 	{{#if materials.original.primingGround}}
 	<div class="col-md-12">
 	  <div class="primingGround">
@@ -113,17 +122,17 @@
 	{{#if materials.original.support}}
 	<div class="col-md-12">
 	  <div class="support">
-	    <div class="individual-property-display">Support/strainer:<br/> 
+	    <div class="individual-property-display">Type of support:<br/> 
 	      <div class="individual-value-display">{{materials.original.support}}</div>
 	    </div>
 	  </div>
 	</div>
 	{{/if}}
-	{{#if materials.original.support}}
+	{{#if materials.original.thickness}}
 	<div class="col-md-12">
-	  <div class="support">
-	    <div class="individual-property-display">Type of support:<br/> 
-	      <div class="individual-value-display">{{materials.original.support}}</div>
+	  <div class="thickness">
+	    <div class="individual-property-display">Thickness:<br/> 
+	      <div class="individual-value-display">{{materials.original.thickness}}</div>
 	    </div>
 	  </div>
 	</div>
@@ -173,31 +182,39 @@
 	  </div>
 	</div>
 	{{/if}}
-	{{#if materials.original.density.weft}}
+	{{#if materials.original.density}}
 	<div class="col-md-12">
 	  <div class="density">
 	    <div class="individual-property-display">Density per cm²:<br/>
 	      <div class="individual-value-display">
-	      Weft: {{materials.original.density.weft}}<br/>
-	      Warp: {{materials.original.density.warp}}
+	      {{#if materials.original.density.weft}}
+	      	Weft: {{materials.original.density.weft}}<br/>
+	      {{/if}}
+	      {{#if materials.original.density.weft}}
+	      	Warp: {{materials.original.density.weft}}
+	      {{/if}}
 	      </div>
 	    </div>
 	  </div>
 	</div>
 	{{/if}}
-	{{#if materials.original.thickness.weft}}
+	{{#if materials.original.thickness}}
 	<div class="col-md-12">
 	  <div class="density">
 	    <div class="individual-property-display">Thickness of threads:<br/>
 	      <div class="individual-value-display">
-	      Weft: {{materials.original.thicknessOfThread.weft}}<br/>
-	      Warp: {{materials.original.thicknessOfThread.warp}}
+	      {{#if materials.original.thicknessOfThread.weft}}
+	      	Weft: {{materials.original.thicknessOfThread.weft}}<br/>
+	      {{/if}}
+	      {{#if materials.original.thicknessOfThread.warp}}
+	      	Warp: {{materials.original.thicknessOfThread.warp}}
+	      {{/if}}
 	      </div>
 	    </div>
 	  </div>
 	</div>
 	{{/if}}
-	{{#if materials.original.thickness.weft}}
+	{{#if materials.original.decorativeFrame}}
 	<div class="col-md-12">
 	  <div class="density">
 	    <div class="individual-property-display">Decorative frame:<br/>
@@ -214,15 +231,15 @@
 	      {{#if materials.original.decorativeFrame.decorativeLayer}}
 	      	Decorative layer: {{materials.original.decorativeFrame.decorativeLayer}}<br/>
 	      {{/if}}
-	      {{#if materials.original.decorativeFrame.warnish}}
-	      	Warnish: {{materials.original.decorativeFrame.warnish}}
+	      {{#if materials.original.decorativeFrame.varnish}}
+	      	Varnish: {{materials.original.decorativeFrame.varnish}}
 	      {{/if}}
 	      </div>
 	    </div>
 	  </div>
 	</div>
 	{{/if}}
-	{{#if materials.original.plaster.layers}}
+	{{#if materials.original.plaster}}
 	<div class="col-md-12">
 	  <div class="plaster">
 	    <div class="individual-property-display">Plaster information (for wall painting):<br/>
@@ -280,8 +297,8 @@
 	</div>
 	</div>
 	{{#if originalObj}}
-		<div class="col-xs-5 add-bottom-space">
-	    	{{> item_original_images}}
+		<div class="col-xs-12 col-sm-5 add-bottom-space">
+	    	{{> images_original}}
 	    </div>
 	{{/if}}
     <div class="col-xs-12">
@@ -291,7 +308,11 @@
 	<div class="col-md-12 align-center">
 	  <div class="samples">
 	    <div class="individual-property-display">Samples investigated:<br/>
-	      <div class="individual-value-display">{{materials.original.notes.samples}}</div>
+	      <div class="individual-value-display">
+	      	<pre>
+	      		{{materials.original.notes.samples}}
+	      	</pre>
+	      </div>
 	    </div>
 	  </div>
 	</div>
@@ -300,7 +321,11 @@
 	<div class="col-md-12 align-center">
 	  <div class="artHistory">
 	    <div class="individual-property-display">Short overview of art history:<br/>
-	      <div class="individual-value-display">{{materials.original.notes.artHistory}}</div>
+	      <div class="individual-value-display">
+	      	<pre>
+	      		{{materials.original.notes.artHistory}}
+	      	</pre>
+	      </div>
 	    </div>
 	  </div>
 	</div>
@@ -309,7 +334,24 @@
 	<div class="col-md-12 align-center">
 	  <div class="artHistory">
 	    <div class="individual-property-display">Comments:<br/>
-	      <div class="individual-value-display">{{materials.original.notes.comments}}</div>
+	      <div class="individual-value-display">
+	      	<pre>
+	      		{{materials.original.notes.comments}}
+	      	</pre>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.original.notes.sources}}
+	<div class="col-md-12 align-center">
+	  <div class="sources">
+	    <div class="individual-property-display">Sources:<br/>
+	      <div class="individual-value-display">
+	      	<pre>
+	      		{{materials.original.notes.sources}}
+	      	</pre>
+	      </div>
 	    </div>
 	  </div>
 	</div>

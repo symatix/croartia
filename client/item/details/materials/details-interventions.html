@@ -2,6 +2,15 @@
 <div class="row">
 	<div class="col-xs-7">
 	<div class="row">
+	{{#if materials.interventions.materials}}
+	<div class="col-md-12">
+	  <div class="materials">
+	    <div class="individual-property-display">Materials involved:<br/>
+	      <div class="individual-value-display">{{materials.interventions.materials}}</div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
 	{{#if materials.interventions.primingGround}}
 	<div class="col-md-12">
 	  <div class="primingGround">
@@ -20,11 +29,11 @@
 	  </div>
 	</div>
 	{{/if}}
-	{{#if materials.interventions.bendingMedium}}
+	{{#if materials.interventions.bindingMedium}}
 	<div class="col-md-12">
-	  <div class="bendingMedium">
+	  <div class="bindingMedium">
 	    <div class="individual-property-display">Binding medium identified:<br/>
-	      <div class="individual-value-display">{{materials.interventions.bendingMedium}}</div>
+	      <div class="individual-value-display">{{materials.interventions.bindingMedium}}</div>
 	    </div>
 	  </div>
 	</div>
@@ -52,15 +61,6 @@
 	  <div class="layerVarnish">
 	    <div class="individual-property-display">Finishing layer/varnish:<br/> 
 	      <div class="individual-value-display">{{materials.interventions.layerVarnish}}</div>
-	    </div>
-	  </div>
-	</div>
-	{{/if}}
-	{{#if materials.interventions.underdrawingPentimento}}
-	<div class="col-md-12">
-	  <div class="underdrawingPentimento">
-	    <div class="individual-property-display">Underdrawing/pentimento:<br/> 
-	      <div class="individual-value-display">{{materials.interventions.underdrawingPentimento}}</div>
 	    </div>
 	  </div>
 	</div>
@@ -97,42 +97,6 @@
 	  <div class="stretcher">
 	    <div class="individual-property-display">Stretcher:<br/> 
 	      <div class="individual-value-display">{{materials.interventions.stretcher}}</div>
-	    </div>
-	  </div>
-	</div>
-	{{/if}}
-	{{#if materials.interventions.interventions}}
-	<div class="col-md-12">
-	  <div class="interventions">
-	    <div class="individual-property-display">Interventions on support:<br/> 
-	      <div class="individual-value-display">{{materials.interventions.interventions}}</div>
-	    </div>
-	  </div>
-	</div>
-	{{/if}}
-	{{#if materials.interventions.supportStrainer}}
-	<div class="col-md-12">
-	  <div class="stretcher">
-	    <div class="individual-property-display">Support/strainer:<br/> 
-	      <div class="individual-value-display">{{materials.interventions.supportStrainer}}</div>
-	    </div>
-	  </div>
-	</div>
-	{{/if}}
-	{{#if materials.interventions.support}}
-	<div class="col-md-12">
-	  <div class="support">
-	    <div class="individual-property-display">Support/strainer:<br/> 
-	      <div class="individual-value-display">{{materials.interventions.support}}</div>
-	    </div>
-	  </div>
-	</div>
-	{{/if}}
-	{{#if materials.interventions.support}}
-	<div class="col-md-12">
-	  <div class="support">
-	    <div class="individual-property-display">Type of support:<br/> 
-	      <div class="individual-value-display">{{materials.interventions.support}}</div>
 	    </div>
 	  </div>
 	</div>
@@ -187,20 +151,28 @@
 	  <div class="density">
 	    <div class="individual-property-display">Density per cm²:<br/>
 	      <div class="individual-value-display">
-	      Weft: {{materials.interventions.density.weft}}<br/>
-	      Warp: {{materials.interventions.density.warp}}
+	      {{#if materials.interventions.density.weft}}
+	      	Weft: {{materials.originterventionsinal.density.weft}}<br/>
+	      {{/if}}
+	      {{#if materials.interventions.density.weft}}
+	      	Warp: {{materials.interventions.density.weft}}
+	      {{/if}}
 	      </div>
 	    </div>
 	  </div>
 	</div>
 	{{/if}}
-	{{#if materials.interventions.thickness.weft}}
+	{{#if materials.interventions.thicknessOfThread.weft}}
 	<div class="col-md-12">
 	  <div class="density">
 	    <div class="individual-property-display">Thickness of threads:<br/>
 	      <div class="individual-value-display">
-	      Weft: {{materials.interventions.thickness.weft}}<br/>
-	      Warp: {{materials.interventions.thickness.warp}}
+	      {{#if materials.interventions.thicknessOfThread.weft}}
+	      	Weft: {{materials.interventions.thicknessOfThread.weft}}<br/>
+	      {{/if}}
+	      {{#if materials.interventions.thicknessOfThread.warp}}
+	      	Warp: {{materials.interventions.thicknessOfThread.warp}}
+	      {{/if}}
 	      </div>
 	    </div>
 	  </div>
@@ -223,8 +195,8 @@
 	      {{#if materials.interventions.decorativeFrame.decorativeLayer}}
 	      	Decorative layer: {{materials.interventions.decorativeFrame.decorativeLayer}}<br/>
 	      {{/if}}
-	      {{#if materials.interventions.decorativeFrame.warnish}}
-	      	Warnish: {{materials.interventions.decorativeFrame.warnish}}
+	      {{#if materials.interventions.decorativeFrame.varnish}}
+	      	Warnish: {{materials.interventions.decorativeFrame.varnish}}
 	      {{/if}}
 	      </div>
 	    </div>
@@ -289,8 +261,8 @@
 	</div>
 	</div>
 	{{#if originalObj}}
-	<div class="col-xs-5">
-    	{{> item_original_images}}
+	<div class="col-xs-12 col-sm-5">
+    	{{> images_interventions}}
     </div>
 	{{/if}}
     <div class="col-xs-12">
@@ -300,16 +272,37 @@
 	<div class="col-md-12 align-center">
 	  <div class="samples">
 	    <div class="individual-property-display">Samples investigated:<br/>
-	      <div class="individual-value-display">{{materials.interventions.notes.samples}}</div>
+	      <div class="individual-value-display">
+	      	<pre>
+	      		{{materials.interventions.notes.samples}}
+	      	</pre>
+	      </div>
 	    </div>
 	  </div>
 	</div>
 	{{/if}}
-	{{#if materials.interventions.notes.artHistory}}
+	{{#if materials.interventions.notes.interventions}}
 	<div class="col-md-12 align-center">
-	  <div class="artHistory">
-	    <div class="individual-property-display">Short overview of art history:<br/>
-	      <div class="individual-value-display">{{materials.interventions.notes.artHistory}}</div>
+	  <div class="interventions">
+	    <div class="individual-property-display">Interventions:<br/>
+	      <div class="individual-value-display">
+	      	<pre>
+	      		{{materials.interventions.notes.interventions}}
+	      	</pre>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	{{/if}}
+	{{#if materials.interventions.notes.sources}}
+	<div class="col-md-12 align-center">
+	  <div class="sources">
+	    <div class="individual-property-display">Sources:<br/>
+	      <div class="individual-value-display">
+	      	<pre>
+	      		{{materials.interventions.notes.sources}}
+	      	</pre>
+	      </div>
 	    </div>
 	  </div>
 	</div>
@@ -318,7 +311,11 @@
 	<div class="col-md-12 align-center">
 	  <div class="artHistory">
 	    <div class="individual-property-display">Comments:<br/>
-	      <div class="individual-value-display">{{materials.interventions.notes.comments}}</div>
+	      <div class="individual-value-display">
+	      	<pre>
+	      		{{materials.interventions.notes.comments}}
+	      	</pre>
+	      </div>
 	    </div>
 	  </div>
 	</div>
